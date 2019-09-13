@@ -1,15 +1,33 @@
 {
-  "name": "code-exercise",
+  "name": "assignment",
   "version": "1.0.0",
-  "description": "This is a shopping cart coding exercise",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "canned -p 5000 ./server"
+    "start": "webpack-dev-server --config=config/webpack.dev.js",
+    "build": "webpack --config=config/webpack.dev.js"
   },
+  "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  },
   "dependencies": {
-    "canned": "^0.3.12"
+    "autoprefixer": "^9.6.1",
+    "css-loader": "^3.2.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
+    "handlebars": "^4.2.0",
+    "handlebars-loader": "^1.7.1",
+    "html-loader": "^0.5.5",
+    "node-sass": "^4.12.0",
+    "postcss": "^7.0.18",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0"
   }
 }
