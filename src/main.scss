@@ -1,7 +1,9 @@
+@import './scss/_index.scss';
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: $font-family;
 }
 
-@import './scss/_index.scss';

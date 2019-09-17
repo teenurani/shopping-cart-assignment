@@ -5,37 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SABKA BAZAAR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Dosis:400,600,700"
+    />
     <script src="main-bundle.js"></script>
   </head>
   <body>
-    <header class="main-header">
-      <a href="" class="main-header__logo">
-        <img src="../static/images/logo.png" alt="Sabka Bazaar" />
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav__items">
-          <li class="main-nav__item">
+    <header class="main__header">
+      <nav class="nav">
+        <a href="" class="main__header__logo">
+          <img src="../static/images/logo.png" alt="Sabka Bazaar" />
+        </a>
+        <ul class="nav__items">
+          <li class="nav__item nav__item--home">
             <a href="">Home</a>
           </li>
-          <li class="main-nav__item">
+          <li class="nav__item nav__item--products">
             <a href="">Products</a>
           </li>
-          <li class="main-nav__item">
-            <ul class="main-nav__item--auth">
+          <li class="nav__item nav__item--auth">
+            <ul class="nav__item--auth_item">
               <li class="nav__item">
-                <a class="nav__link" href="">Sign In</a>
+                <a class="nav__link" href="">SignIn</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="">Register</a>
               </li>
             </ul>
             <div class="cart">
+              <span></span>
               <span>0 Items</span>
             </div>
           </li>
         </ul>
       </nav>
     </header>
-    <div id="app"></div>
+    <main class="main">
+      <div class="main-carousel">
+        <img src="../static/images/offers/offer1.jpg" alt="Offer1" />
+      </div>
+      <div class="main_fruits">
+        <div class="main_fruits--item">
+          <h4>Fruits and Vegetables</h4>
+          <span>A variety of fresh fruits and vegetables.</span>
+          <a href="">Explore fruit-and-veg</a>
+        </div>
+        <img
+          src="../static/images/category/fruits.png"
+          alt="Fruits and Vegetables"
+        />
+      </div>
+    </main>
+    <footer class="footer"></footer>
   </body>
 </html>
