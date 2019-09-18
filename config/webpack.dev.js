@@ -63,7 +63,19 @@ module.exports = {
             }
           }
         ]
-      },    
+      },
+      {
+        test: /\.(svg)$/,
+        exclude: /fonts/ /* dont want svg fonts from fonts folder to be included */,
+        use: [
+          {
+            loader: "svg-url-loader",
+            options: {
+              noquotes: true
+            }
+          }
+        ]
+      },
       {
         test: /\.hbs$/,
         use: [

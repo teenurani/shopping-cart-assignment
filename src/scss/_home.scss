@@ -16,12 +16,16 @@ body {
     grid-template-columns: 1fr 3fr;
     height: 100%;
     margin: auto 10rem;
-    padding-top: 0.3rem;
+    padding-top: 0.3rem;    
   }
   .nav > .nav__items {
     display: grid;
     grid-template-columns: 0.1fr 0.1fr auto 0.1fr;
 
+    a{
+      color: $font-color-1;
+      font-weight: bold;
+    }
     .nav__item {
       align-self: end;
     }
@@ -33,15 +37,34 @@ body {
 
       .nav__item--auth_item {
         display: grid;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
         font-size: 0.8rem;
         align-self: start;
+        justify-self: end;
       }
-
+      a {
+        color: $font-color-2;
+        font-weight: bold;
+      }
       .cart {
         align-self: end;
-        height: 2.5rem;
         background-color: $background-color;
+        padding: 0.8rem 1.5rem;
+
+        img {
+          height: 2rem;
+          float: left;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 2rem;
+          color: $font-color-2;
+          padding-left: 0.5rem;
+          font-weight: bold;
+        }
       }
     }
   }

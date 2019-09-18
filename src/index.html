@@ -34,18 +34,47 @@
               </li>
             </ul>
             <div class="cart">
-              <span></span>
-              <span>0 Items</span>
+              <img src="../static/images/cart.svg" />
+              <span>0 items</span>
             </div>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main">
-      <div class="main-carousel">
-        <img src="../static/images/offers/offer1.jpg" alt="Offer1" />
-      </div>
-      <div class="main_fruits">
+      <div class="carousel-container">
+        <div class="carousel__item">
+          <img src="../static/images/offers/offer1.jpg" style="width:100%" />
+        </div>
+        <div class="carousel__item">
+          <img src="../static/images/offers/offer2.jpg" style="width:100%" />
+        </div>
+        <div class="carousel__item">
+          <img src="../static/images/offers/offer3.jpg" style="width:100%" />
+        </div>
+        <div class="carousel__item">
+          <img src="../static/images/offers/offer4.jpg" style="width:100%" />
+        </div>
+        <div class="carousel__item">
+          <img src="../static/images/offers/offer5.jpg" style="width:100%" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">Prev</a>
+        <a class="next" onclick="plusSlides(1)">Next</a>
+
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <div class="border-block">
+          <img src="../static/images/border.jpg">
+        </div>
+      </div>    
+
+      <!-- <div class="main_fruits">
         <div class="main_fruits--item">
           <h4>Fruits and Vegetables</h4>
           <span>A variety of fresh fruits and vegetables.</span>
@@ -55,8 +84,41 @@
           src="../static/images/category/fruits.png"
           alt="Fruits and Vegetables"
         />
-      </div>
+      </div> -->
     </main>
     <footer class="footer"></footer>
+    <script>
+      //Todo integrate into one container
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("carousel__item");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
   </body>
 </html>
