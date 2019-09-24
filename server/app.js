@@ -1,12 +1,29 @@
 // call the packages we need
 var express = require("express"); // call express
-var app = express(); // define our app using express
+var server = express(); // define our server using express
 var bodyParser = require("body-parser");
 
-// configure app to use bodyParser()
+// configure server to use bodyParser()
 // this will let us get the data from a POST
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(bodyParser.json());
+
+const webpack = require("webpack");
+const config = require("../config/webpack.dev");
+const compiler = webpack(config);
+
+const webpackDevMiddleware = require("webpack-dev-middleware")(
+  compiler,
+  config.devServer
+);
+
+const webpackHotMiddleware = require("webpack-hot-middleware")(compiler);
+
+server.use(webpackDevMiddleware);
+server.use(webpackHotMiddleware);
+
+const staticMiddleware = express.static("dist");
+server.use(staticMiddleware);
 
 var port = process.env.PORT || 8080; // set our port
 
@@ -31,8 +48,8 @@ router.get("/categories", function(req, res) {
 });
 
 // all of our routes will be prefixed with /api
-app.use("/api", router);
+server.use("/api", router);
 
 // START THE SERVER
-app.listen(port);
+server.listen(port);
 console.log("Server running at port " + port);

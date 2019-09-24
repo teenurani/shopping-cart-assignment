@@ -1,4 +1,6 @@
 const path = require("path");
+const webpack = require("webpack");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -7,11 +9,15 @@ module.exports = {
   mode: "development",
   output: {
     filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "../dist")   
+    path: path.resolve(__dirname, "../dist")
   },
   devServer: {
     contentBase: "dist",
-    overlay: true
+    overlay: true,
+    hot: true,
+    stats: {
+      color: true
+    }
   },
   module: {
     rules: [
@@ -35,15 +41,6 @@ module.exports = {
       {
         test: /\.html$/,
         use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].html"
-            }
-          },
-          {
-            loader: "extract-loader"
-          },
           {
             loader: "html-loader",
             options: {
@@ -79,10 +76,25 @@ module.exports = {
         test: /\.hbs$/,
         use: [
           {
-            loader: "handlebars-loader"
+            loader: "handlebars-loader",
+            query: {
+              inlineRequires: "/images/"
+            }
           }
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HTMLWebpackPlugin({
+      filename: "home.html",
+      template: "./src/template/home.hbs"
+    }),
+    new HTMLWebpackPlugin({
+      filename: "product.html",
+      template: "./src/template/product.hbs",
+      chunks: []
+    })
+  ]
 };

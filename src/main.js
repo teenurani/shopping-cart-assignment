@@ -1,9 +1,13 @@
+require("webpack-hot-middleware/client");
 require("./main.scss");
-// require("./index.html");
-require("./template/home.html");
-require("./template/product.html");
 require("./js/index");
+var banners;
 
-
-
-
+fetch("/api/banners")
+  .then(resp => resp.json())
+  .then(function(data) {
+    banners = data;
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
