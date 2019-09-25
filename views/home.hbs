@@ -1,0 +1,40 @@
+<main class="main">
+    <div class="carousel-container">
+        {{#each banners}}
+        <div class="carousel__item">
+            <img src={{bannerImageUrl}} alt={{bannerImageAlt}} style="width:100%" />
+        </div>
+        {{/each}}
+        <a class="prev" id="prev">Prev</a>
+        <a class="next" id="next">Next</a>
+
+        <div class="dot-container">
+            {{#each dotArray as |val key|}}
+            <span class="dot" id="{{key}}"></span>
+            {{/each}}
+        </div>
+        <div class="border-block">
+            <img src="/static/images/border.jpg" />
+        </div>
+    </div>
+
+    <div class="main__category">
+        <ul class="category__items">
+            {{#each categoriesData}}
+            <li class="category__item">
+                <div class="category__item--img">
+                    <img src={{imageUrl}} alt={{name}} />
+                </div>
+                <div class="category__item--info">
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                    <a href="">Explore {{key}}</a>
+                </div>
+                <div class="border-block">
+                    <img src="/static/images/border.jpg" />
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</main>

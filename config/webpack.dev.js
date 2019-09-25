@@ -1,6 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -85,16 +84,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HTMLWebpackPlugin({
-      filename: "home.html",
-      template: "./src/template/home.hbs"
-    }),
-    new HTMLWebpackPlugin({
-      filename: "product.html",
-      template: "./src/template/product.hbs",
-      chunks: []
-    })
-  ]
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 };

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SABKA BAZAAR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600,700" />
+</head>
+
+<body>
+    <header class="main__header">
+        <nav class="nav">
+            <a href="" class="main__header__logo">
+                <img src="/static/images/logo.png" alt="Sabka Bazaar" />
+            </a>
+            <ul class="nav__items">
+                <li class="nav__item nav__item--home">
+                    <a href="/">Home</a>
+                </li>
+                <li class="nav__item nav__item--products">
+                    <a href="/product">Products</a>
+                </li>
+                <li class="nav__item nav__item--auth">
+                    <ul class="nav__item--auth_item">
+                        <li class="nav__item">
+                            <a class="nav__link" href="">SignIn</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="">Register</a>
+                        </li>
+                    </ul>
+                    <div class="cart">
+                        <img src="/static/images/cart.svg" alt="cart" />
+                        <span>0 items</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {{{ body }}}
+    <footer class="footer">
+        Copyright &#169; 2011-2018 Sabka Bazar Grocery Supplies Pvt Ltd
+    </footer>
+    <script src="main-bundle.js"></script>
+</body>
+
+</html>
