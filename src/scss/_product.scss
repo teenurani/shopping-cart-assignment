@@ -36,6 +36,11 @@
       grid-gap: 1rem;
       &--item {
         border-bottom: dashed 0.1rem $color-theme-1;
+        h3 {
+          font-size: 1rem;
+          height: 4rem;
+          overflow: hidden;
+        }
         img {
           max-width: 80%;
         }
@@ -43,6 +48,8 @@
           background-color: $background-color;
           font-size: 1rem;
           padding: 0.5rem;
+          overflow: hidden;
+          height: 9.4rem;
         }
         .price__info {
           display: flex;
