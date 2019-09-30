@@ -17,6 +17,13 @@
         margin-left: 1rem;
         cursor: pointer;
       }
+      &--item:hover {
+        background-color: $background-color-dark;
+      }
+      .hightlight {
+        background-color: $color-theme;
+        color: $background-color;
+      }
     }
   }
 

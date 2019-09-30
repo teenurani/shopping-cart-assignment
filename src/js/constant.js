@@ -1,3 +1,0 @@
-const CONSTANS = {};
-
-export { CONSTANS };
