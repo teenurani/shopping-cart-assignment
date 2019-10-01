@@ -1,0 +1,21 @@
+<div class="auth" id="login">
+    <div class="auth__header">
+        <h1>Login</h1>
+        <p>Get access to your orders. Whishlist and Recommendations</p>
+    </div>
+    <section class="auth__main">
+        <form action="/" class="auth__form" id="login__form" novalidate method="POST">
+            <div class="form__group">
+                <label for="email" class="form__label" aria-label="Email">Email</label>
+                <input type="email" class="form__control" name="email" id="email" required>
+                <p class="form__error"></p>
+            </div>
+            <div class="form__group">
+                <label for="password" class="form__label" aria-label="Password">Password</label>
+                <input type="password" class="form__control" name="password" id="password" required>
+                <p class="form__error"></p>
+            </div>
+            <button type="submit" class="btn" aria-label="Signup">Signup</button>
+        </form>
+    </section>
+</div>

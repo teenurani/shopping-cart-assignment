@@ -1,0 +1,31 @@
+.form__group {
+  color: $background-color-dark;
+  border: none;
+  border-bottom: 0.125rem solid $background-color-dark;
+  margin-bottom: 2rem;
+
+  .form__label {
+    display: block;
+  }
+
+  .form__control {
+    border: none;
+  }
+
+  .form__control--active {
+    margin: 1rem auto;
+  }
+
+  &--active {
+    color: #53c4ce;
+    border-color: #53c4ce;
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: $color-theme;
+  border: none;
+  color: $font-color-3;
+}

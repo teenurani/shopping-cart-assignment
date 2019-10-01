@@ -1,0 +1,36 @@
+<div class="auth" id="registration">
+    <div class="auth__header">
+        <h1>Signup</h1>
+        <p>We do not share your personal details with anyone.</p>
+    </div>
+    <div class="auth__main">
+        <form action="/" class="auth__form" id="registration__form" novalidate method="POST">
+            <div class="form__group">
+                <label for="firstName" class="form__label" aria-label="FirstName">First Name</label>
+                <input type="text" class="form__control" name="firstName" id="firstName" required>
+                <p class="form__error"></p>
+            </div>
+            <div class="form__group">
+                <label for="lastName" class="form__label" aria-label="LastName">Last Name</label>
+                <input type="text" class="form__control" name="lastName" id="lastName" required>
+                <p class="form__error"></p>
+            </div>
+            <div class="form__group">
+                <label for="email" class="form__label" aria-label="Email">Email</label>
+                <input type="email" class="form__control" name="email" id="email" required>
+                <p class="form__error"></p>
+            </div>
+            <div class="form__group">
+                <label for="password" class="form__label" aria-label="Password">Password</label>
+                <input type="password" class="form__control" name="password" id="password" required>
+                <p class="form__error"></p>
+            </div>
+            <div class="form__group">
+                <label for="confirmPassword" class="form__label" aria-label="Password">Confirm Password</label>
+                <input type="password" class="form__control" name="confirmPassword" id="confirmPassword" required>
+                <p class="form__error"></p>
+            </div>
+            <button type="submit" class="btn" aria-label="Signup">Signup</button>
+        </form>
+    </div>
+</div>

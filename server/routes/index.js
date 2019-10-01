@@ -16,6 +16,14 @@ router.get("/product", function(req, res, next) {
   res.render("product", { categoriesData, products });
 });
 
+router.get("/registration", function(req, res, next) {
+  res.render("registration");
+});
+
+router.get("/login", function(req, res, next) {
+  res.render("login");
+});
+
 // API start
 router.get("/api/getBanners", function(req, res) {
   res.json(banners);
