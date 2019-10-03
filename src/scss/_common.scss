@@ -1,7 +1,5 @@
 .form__group {
   color: $background-color-dark;
-  border: none;
-  border-bottom: 0.125rem solid $background-color-dark;
   margin-bottom: 2rem;
 
   .form__label {
@@ -10,16 +8,19 @@
 
   .form__control {
     border: none;
+    border-bottom: 0.125rem solid $background-color-dark;
+    background: none;
     width: 100%;
+    outline: 0 none;
   }
 
-  .form__control--active {
-    margin: 1rem auto;
-  }
-
-  &--active {
-    color: #53c4ce;
+  .form__control:focus {
     border-color: #53c4ce;
+    margin: 1rem auto;    
+  }
+
+  .form__error {
+    color: red;
   }
 }
 

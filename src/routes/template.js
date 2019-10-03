@@ -3,9 +3,9 @@ var router = express.Router();
 const banners = require("../data/banners/index.get.json");
 const products = require("../data/products/index.get.json");
 const categories = require("../data/categories/index.get.json");
-const helper = require("../js/helper");
+const helper = require("../js/utils");
 
-router.get("/", function(req, res, next) {
+router.all("/", function(req, res, next) {
   const categoriesData = helper.categoriesData(categories);
   const dotArray = [...Array(banners.length).keys()];
   res.render("home", { banners, categoriesData, dotArray });
@@ -13,7 +13,7 @@ router.get("/", function(req, res, next) {
 
 router.get("/product", function(req, res, next) {
   const categoriesData = helper.categoriesData(categories);
-  res.render("product", { categoriesData, products });
+  res.render("product", { categoriesData });
 });
 
 router.get("/registration", function(req, res, next) {

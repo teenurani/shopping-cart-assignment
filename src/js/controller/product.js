@@ -29,3 +29,5 @@ elements.productInfo.forEach(function(el) {
     controlProduct(this.id);
   });
 });
+
+controlProduct();
