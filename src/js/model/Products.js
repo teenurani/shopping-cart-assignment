@@ -1,19 +1,17 @@
 import { END_POINTS } from "../config";
+import { getResults } from "../api";
 
 export default class Products {
   constructor(query) {
     this.query = query;
   }
 
-  async getResults() {
-    const URL = END_POINTS.PRODUCTS;
+  async getProducts() {
     try {
-      const res = await fetch(URL);
-      const results = await res.json();
+      const results = await getResults(END_POINTS.PRODUCTS);
       this.results = this.query
         ? results.filter((val, index) => val.category == this.query)
         : results;
-    //   console.log("productList ", this.results);
     } catch (error) {
       console.log(error);
     }

@@ -3,9 +3,13 @@ import { CONSTANS } from "../constants";
 const state = {};
 
 //Create private variable
-const form = document.getElementById(CONSTANS.REGISTRATION__FORM);
-const formInput = document.querySelectorAll(CONSTANS.REGISTRATION_FORM_INPUT_FIELD);
-
+const form =
+  window.location.href.indexOf("registration") > 0
+    ? document.getElementById(CONSTANS.REGISTRATION__FORM)
+    : "";
+const formInput = document.querySelectorAll(
+  CONSTANS.REGISTRATION_FORM_INPUT_FIELD
+);
 
 /**
  * private method to register listener to submit the form
@@ -63,8 +67,10 @@ state.validateForm = e => {
 };
 
 // register listener to input fields
-state.init = () => { 
-  state.validate("submit");
+state.init = () => {
+  window.location.href.indexOf("registration") > 0
+    ? state.validate("submit")
+    : "";
 };
 
 //initialize function

@@ -1,6 +1,6 @@
 import { elements } from "../base";
 
-const renderProducts = product => {
+const productsView = product => {
   const markup = `<li class="product__info__list--item">
         <h3>
             ${product.name}
@@ -18,7 +18,17 @@ const renderProducts = product => {
   elements.productList.insertAdjacentHTML("beforeend", markup);
 };
 
-export const renderResults = products => {
+const categoriesView = category => {
+  const markup = `<li class="product__sidebar__list--item" id="${category.id}"> ${category.name} </li>`;
+  elements.categoryList.insertAdjacentHTML("beforeend", markup);
+};
+
+export const renderCategories = products => {
+  elements.categoryList.innerHTML = "";
+  products.forEach(categoriesView);
+};
+
+export const renderProducts = products => {
   elements.productList.innerHTML = "";
-  products.forEach(renderProducts);
+  products.forEach(productsView);
 };
