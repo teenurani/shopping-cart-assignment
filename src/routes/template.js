@@ -2,8 +2,6 @@ var express = require("express");
 var router = express.Router();
 
 router.all("/", function(req, res, next) {
-  // const categoriesData = helper.categoriesData(categories);
-  // const dotArray = [...Array(banners.length).keys()];
   res.render("home");
 });
 

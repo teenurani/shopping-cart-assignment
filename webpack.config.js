@@ -3,9 +3,6 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: ["babel-polyfill", "./src/main.js"],
-  // entry: {
-  //   main: "./src/main.js"
-  // },
   mode: "development",
   output: {
     filename: "main-bundle.js",

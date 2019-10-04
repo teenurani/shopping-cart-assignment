@@ -1,6 +1,10 @@
+import { elements } from "../base";
+
 window.carousel = (() => {
   var slideIndex = 1;
-  showSlides(slideIndex);
+  setTimeout(function() {
+    showSlides(slideIndex);
+  }, 100);
 
   return {
     plusSlides: n => {
@@ -13,8 +17,8 @@ window.carousel = (() => {
 
   function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("carousel__item");
-    var dots = document.getElementsByClassName("dot");
+    var slides = elements.carouselItem;
+    var dots = elements.bannersDot;
     if (n > slides.length) {
       slideIndex = 1;
     }

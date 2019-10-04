@@ -1,5 +1,5 @@
-import { END_POINTS } from "../config";
 import { getResults } from "../api";
+import { CONSTANS } from "../constants";
 
 export default class Products {
   constructor(query) {
@@ -8,12 +8,12 @@ export default class Products {
 
   async getProducts() {
     try {
-      const results = await getResults(END_POINTS.PRODUCTS);
+      const results = await getResults(CONSTANS.END_POINTS.PRODUCTS);
       this.results = this.query
         ? results.filter((val, index) => val.category == this.query)
         : results;
     } catch (error) {
-      console.log(error);
+      console.log(CONSTANS.errorMsg.productList, error);
     }
   }
 }

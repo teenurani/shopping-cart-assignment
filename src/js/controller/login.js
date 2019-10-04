@@ -4,7 +4,7 @@ const state = {};
 
 //Create private variable
 const form =
-  window.location.href.indexOf("login") > 0
+  CONSTANS.currentURL.login > 0
     ? document.getElementById(CONSTANS.LOGIN__FORM)
     : "";
 const formInput = document.querySelectorAll(CONSTANS.LOGIN_FORM_INPUT_FIELD);
@@ -31,14 +31,14 @@ state.validateForm = e => {
       count = 0;
     } else {
       if (
-        item.type === "email" &&
+        item.type === CONSTANS.EMAIL &&
         !item.value.match(CONSTANS.EMAIL_VALIDATION)
       ) {
         errorMsg = CONSTANS.EMAIL_ERROR_MSG;
         count = 0;
       }
       if (
-        item.type === "password" &&
+        item.type === CONSTANS.PASSWORD &&
         (item.value.length < 6 ||
           !item.value.match(CONSTANS.PASSWORD_VALIDATION))
       ) {
@@ -59,7 +59,7 @@ state.validateForm = e => {
 
 // register listener to input fields
 state.init = () => {
-  window.location.href.indexOf("login") > 0 ? state.validate("submit") : "";
+  CONSTANS.currentURL.login > 0 ? state.validate(CONSTANS.SUBMIT) : "";
 };
 
 //initialize function

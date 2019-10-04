@@ -1,10 +1,11 @@
 import { CONSTANS } from "../constants";
+import { elements } from "../base";
 
 const state = {};
 
 //Create private variable
 const form =
-  window.location.href.indexOf("registration") > 0
+  CONSTANS.currentURL.registration > 0
     ? document.getElementById(CONSTANS.REGISTRATION__FORM)
     : "";
 const formInput = document.querySelectorAll(
@@ -33,7 +34,7 @@ state.validateForm = e => {
       count = 0;
     } else {
       if (
-        item.type === "password" &&
+        item.type === CONSTANS.PASSWORD &&
         (item.value.length < 6 ||
           !item.value.match(CONSTANS.PASSWORD_VALIDATION))
       ) {
@@ -41,14 +42,14 @@ state.validateForm = e => {
         count = 0;
       }
       if (
-        item.id === "confirmPassword" &&
-        item.value.localeCompare(document.getElementById("password").value)
+        item.id === elements.confirmPassword &&
+        item.value.localeCompare(elements.getPassword.value)
       ) {
         errorMsg = CONSTANS.PASSWORD_MISSMATCH;
         count = 0;
       }
       if (
-        item.type === "email" &&
+        item.type === CONSTANS.EMAIL &&
         !item.value.match(CONSTANS.EMAIL_VALIDATION)
       ) {
         errorMsg = CONSTANS.EMAIL_ERROR_MSG;
@@ -68,9 +69,7 @@ state.validateForm = e => {
 
 // register listener to input fields
 state.init = () => {
-  window.location.href.indexOf("registration") > 0
-    ? state.validate("submit")
-    : "";
+  CONSTANS.currentURL.registration > 0 ? state.validate(CONSTANS.SUBMIT) : "";
 };
 
 //initialize function
