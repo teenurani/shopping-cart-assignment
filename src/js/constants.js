@@ -34,5 +34,6 @@ export const CONSTANS = {
   PASSWORD: "password",
   SUBMIT: "submit",
   BUY: "Buy Now",
-  MRP: "MRP Rs "
+  MRP: "MRP",
+  RS: "Rs "
 };

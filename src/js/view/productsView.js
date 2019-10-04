@@ -8,8 +8,11 @@ const productsView = product => {
     <img src=${product.imageURL} alt="name" />
     <p> ${product.description} </p>
     <div class="price__info">
-      <span>${CONSTANS.MRP} ${product.price}</span>
+      <span>${CONSTANS.MRP} ${CONSTANS.RS} ${product.price}</span>
       <a href="">${CONSTANS.BUY}</a>
+    </div>
+    <div class="price__info--ipad">    
+      <a href="">${CONSTANS.BUY} @ ${CONSTANS.RS} ${product.price}</a>
     </div>
   </li>`;
 

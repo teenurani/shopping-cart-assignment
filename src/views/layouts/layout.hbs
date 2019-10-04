@@ -15,28 +15,28 @@
             <a href="/" class="main__header__logo">
                 <img src="/static/images/logo.png" alt="Sabka Bazaar" />
             </a>
-            <ul class="nav__items">
-                <li class="nav__item nav__item--home">
+            <ul class="nav__list">
+                <li class="nav__list--item">
                     <a href="/">Home</a>
                 </li>
-                <li class="nav__item nav__item--products">
+                <li class="nav__list--item">
                     <a href="/product">Products</a>
                 </li>
-                <li class="nav__item nav__item--auth">
-                    <ul class="nav__item--auth_item">
-                        <li class="nav__item">
-                            <a class="nav__link" href="/login">SignIn</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="/registration">Register</a>
-                        </li>
-                    </ul>
-                    <div class="cart">
-                        <img src="/static/images/cart.svg" alt="cart" />
-                        <span>0 items</span>
-                    </div>
-                </li>
             </ul>
+            <div class="nav__auth">
+                <ul class="nav__auth__items">
+                    <li class="nav__auth__items--item">
+                        <a class="nav__link" href="/login">SignIn</a>
+                    </li>
+                    <li class="nav__auth__items--item">
+                        <a class="nav__link" href="/registration">Register</a>
+                    </li>
+                </ul>
+                <div class="cart">
+                    <img src="/static/images/cart.svg" alt="cart" />
+                    <span>0 items</span>
+                </div>
+            </div>
         </nav>
     </header>
     {{{ body }}}

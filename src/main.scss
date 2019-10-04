@@ -1,9 +1,17 @@
-@import './scss/_index.scss';
+@import "./scss/_index.scss";
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: $font-family;    
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: $font-family;
 }
 
+body {
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
