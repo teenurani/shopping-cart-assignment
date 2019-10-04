@@ -9,7 +9,7 @@ const productsView = product => {
     <p> ${product.description} </p>
     <div class="price__info">
       <span>${CONSTANS.MRP} ${product.price}</span>
-      <a href="">${CONSTANS.BuyNow}</a>
+      <a href="">${CONSTANS.BUY}</a>
     </div>
   </li>`;
 

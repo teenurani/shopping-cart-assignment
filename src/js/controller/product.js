@@ -16,7 +16,7 @@ const controlProduct = async categoryId => {
   try {
     await state.products.getProducts();
   } catch (err) {
-    console.log(CONSTANS.errorMsg.productList, err);
+    console.log(CONSTANS.ERROR_MSG.PRODUCTS, err);
   }
   // render result on UI
   productsView.renderProducts(state.products.results);
@@ -27,19 +27,21 @@ const controlCategories = async () => {
   try {
     state.categoryList = await getCategories();
   } catch (err) {
-    console.log(CONSTANS.errorMsg.categoryList, err);
+    console.log(CONSTANS.ERROR_MSG.CATEGORIES, err);
   }
   // render result on UI
   productsView.renderCategories(state.categoryList);
 };
 
-controlCategories();
-controlProduct();
+if (elements.currentURL == CONSTANS.CURRENT_URL.PRODUCT) {
+  controlCategories();
+  controlProduct();
+}
 
 document.addEventListener("click", function(el) {
   if (el.target && el.target.className == elements.productCategoryItem) {
     el.target.parentElement
-      .querySelectorAll(elements.productCategoryItem)
+      .querySelectorAll(elements.productCategoryItemClass)
       .forEach(function(el) {
         el.classList.remove(elements.hightlightClass);
       });

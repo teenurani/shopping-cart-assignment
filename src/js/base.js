@@ -7,8 +7,10 @@ export const elements = {
   bannersDotsList: document.querySelector(".dot-container"),
   carouselItem: document.getElementsByClassName("carousel__item"),
   bannersDot: document.getElementsByClassName("dot"),
-  productCategoryItem: ".product__sidebar__list--item",
-  hightlightClass: ".hightlight",
+  productCategoryItem: "product__sidebar__list--item",
+  productCategoryItemClass: ".product__sidebar__list--item",
+  hightlightClass: "hightlight",
   getPassword: document.getElementById("password"),
-  confirmPassword: "confirmPassword"
+  confirmPassword: "confirmPassword",
+  currentURL: window.location.pathname
 };

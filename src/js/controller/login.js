@@ -1,12 +1,10 @@
 import { CONSTANS } from "../constants";
+import { elements } from "../base";
 
 const state = {};
 
 //Create private variable
-const form =
-  CONSTANS.currentURL.login > 0
-    ? document.getElementById(CONSTANS.LOGIN__FORM)
-    : "";
+const form = document.getElementById(CONSTANS.LOGIN__FORM);
 const formInput = document.querySelectorAll(CONSTANS.LOGIN_FORM_INPUT_FIELD);
 
 /**
@@ -59,8 +57,10 @@ state.validateForm = e => {
 
 // register listener to input fields
 state.init = () => {
-  CONSTANS.currentURL.login > 0 ? state.validate(CONSTANS.SUBMIT) : "";
+  state.validate(CONSTANS.SUBMIT);
 };
 
-//initialize function
-state.init();
+if (elements.currentURL == CONSTANS.CURRENT_URL.LOGIN) {
+  //initialize function
+  state.init();
+}

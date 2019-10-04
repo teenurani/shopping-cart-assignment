@@ -4,10 +4,7 @@ import { elements } from "../base";
 const state = {};
 
 //Create private variable
-const form =
-  CONSTANS.currentURL.registration > 0
-    ? document.getElementById(CONSTANS.REGISTRATION__FORM)
-    : "";
+const form = document.getElementById(CONSTANS.REGISTRATION__FORM);
 const formInput = document.querySelectorAll(
   CONSTANS.REGISTRATION_FORM_INPUT_FIELD
 );
@@ -69,8 +66,10 @@ state.validateForm = e => {
 
 // register listener to input fields
 state.init = () => {
-  CONSTANS.currentURL.registration > 0 ? state.validate(CONSTANS.SUBMIT) : "";
+  state.validate(CONSTANS.SUBMIT);
 };
 
-//initialize function
-state.init();
+if (elements.currentURL == CONSTANS.CURRENT_URL.REGISTER) {
+  //initialize function
+  state.init();
+}

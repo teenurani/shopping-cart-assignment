@@ -7,14 +7,16 @@ export const CONSTANS = {
     PRODUCTS: url + "/api/getProductList",
     ADDTOCART: url + "/api/addToCart"
   },
-  errorMsg: {
-    bannersList: "Error in processing banners list ",
-    categoryList: "Error in processing category list ",
-    productList: "Error in processing product list "
+  ERROR_MSG: {
+    BANNERS: "Error in processing banners list ",
+    CATEGORIES: "Error in processing category list ",
+    PRODUCTS: "Error in processing product list "
   },
-  currentURL: {
-    login: window.location.href.indexOf("login"),
-    registration: window.location.href.indexOf("registration")
+  CURRENT_URL: {
+    LOGIN: "/login",
+    REGISTER: "/registration",
+    HOME: "/",
+    PRODUCT: "/product"
   },
   LOGIN__FORM: "login__form",
   LOGIN_FORM_INPUT_FIELD: "#login__form .form__group input",
@@ -31,6 +33,6 @@ export const CONSTANS = {
   EMAIL: "email",
   PASSWORD: "password",
   SUBMIT: "submit",
-  BuyNow: "Buy Now",
+  BUY: "Buy Now",
   MRP: "MRP Rs "
 };
