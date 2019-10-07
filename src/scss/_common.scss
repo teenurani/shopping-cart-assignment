@@ -1,3 +1,12 @@
+body {
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
 .form__group {
   color: $background-color-dark;
   margin-bottom: 2rem;
@@ -16,7 +25,7 @@
 
   .form__control:focus {
     border-color: #53c4ce;
-    margin: 1rem auto;    
+    margin: 1rem auto;
   }
 
   .form__error {
@@ -25,11 +34,13 @@
 }
 
 .btn {
-  width: 100%;
-  padding: 0.8rem;
   background-color: $color-theme;
-  border: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
   color: $font-color-3;
+  border-radius: 0.2rem;
+  border: none;
 }
-
-
+.btn-lg {
+  width: 100%;
+}

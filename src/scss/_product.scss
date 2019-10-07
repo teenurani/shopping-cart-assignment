@@ -60,21 +60,10 @@
           span {
             font-size: 0.8rem;
           }
-          a {
-            padding: 0.5rem 1rem;
-            color: $font-color-3;
-            background-color: $color-theme;
-          }
         }
         .price__info--ipad {
           display: none;
-          background-color: $color-theme;
-          padding: 0.5rem 1rem;
-          text-align: center;
           margin: 1rem 0rem;
-          a {
-            color: $font-color-3;
-          }
         }
       }
     }

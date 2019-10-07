@@ -35,5 +35,12 @@ export const CONSTANS = {
   SUBMIT: "submit",
   BUY: "Buy Now",
   MRP: "MRP",
-  RS: "Rs "
+  RS: "Rs ",
+  cart: {
+    main_heading: "My Cart",
+    empty_heading: "No items in your cart",
+    empty_content: "Your favourite items are just a click away",
+    empty_btn: "Start Shopping",
+    tagline_text: "You won't find it cheaper anywhere"
+  }
 };

@@ -17,7 +17,7 @@ const categoriesView = category => {
     <div class="category__item--info">
       <h3>${category.name}</h3>
       <p>${category.description}</p>
-      <a href="/product">Explore ${category.key}</a>
+      <a href="/product" class="btn">Explore ${category.key}</a>
     </div>
     <div class="border-block">
     <img src="/static/images/border.jpg" alt="border" />
