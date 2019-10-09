@@ -12,5 +12,13 @@ export const elements = {
   hightlightClass: "hightlight",
   getPassword: document.getElementById("password"),
   confirmPassword: "confirmPassword",
-  currentURL: window.location.pathname
+  currentURL: window.location.pathname,
+  cartList: document.getElementsByClassName("cart__product__list"),
+  cartModal: document.getElementById("cart__modal"),
+  cart: document.getElementById("cart"),
+  cartClose: document.getElementsByClassName("close"),
+  buyNow: "btn buy-now",
+  cartPlus: "btn cart-plus",
+  cartMinus: "btn cart-minus",
+  cartItem: document.querySelector("#cart span")
 };

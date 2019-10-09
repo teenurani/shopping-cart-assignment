@@ -5,12 +5,16 @@ export const CONSTANS = {
     BANNERS: url + "/api/getBanners",
     CATEGORIES: url + "/api/getCategories",
     PRODUCTS: url + "/api/getProductList",
-    ADDTOCART: url + "/api/addToCart"
+    ADDTOCART: url + "/api/addToCart",
+    CARTS: url + "/api/getCartList",
+    REMOVETOCART: url + "api/removeToCart"
   },
   ERROR_MSG: {
     BANNERS: "Error in processing banners list ",
     CATEGORIES: "Error in processing category list ",
-    PRODUCTS: "Error in processing product list "
+    PRODUCTS: "Error in processing product list ",
+    ADDTOCART: "Error in processing add to cart or buy now ",
+    CARTS: "Error in processing cart list "
   },
   CURRENT_URL: {
     LOGIN: "/login",
@@ -40,7 +44,9 @@ export const CONSTANS = {
     main_heading: "My Cart",
     empty_heading: "No items in your cart",
     empty_content: "Your favourite items are just a click away",
-    empty_btn: "Start Shopping",
-    tagline_text: "You won't find it cheaper anywhere"
+    empty_footer_btn: "Start Shopping",
+    tagline_text: "You won't find it cheaper anywhere",
+    footer_btn: "Proceed to Checkout",
+    footer_promo: "Promo code can be applied on payment page"
   }
 };
