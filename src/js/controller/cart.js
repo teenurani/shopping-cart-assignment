@@ -1,4 +1,4 @@
-import { getCarts, addToCarts } from "../model/Cart";
+import { getCarts, addToCarts, removeFromCarts } from "../model/Cart";
 import * as cartView from "../view/cartView";
 import { CONSTANS } from "../constants";
 import { elements } from "../base";
@@ -16,12 +16,34 @@ export const controlCart = async () => {
   cartView.renderCart(state.cartList);
 };
 
+const addToCart = async productId => {
+  // Search for the Categories
+  try {
+    const cart = await addToCarts(productId);
+    elements.cartItem.textContent = cart.cart + " items";
+    cartView.renderCart(cart.data);
+  } catch (err) {
+    console.log(CONSTANS.ERROR_MSG.ADDTOCART, err);
+  }
+};
+
+const removeFromCart = async productId => {
+  // Search for the Categories
+  try {
+    const cart = await removeFromCarts(productId);
+    elements.cartItem.textContent = cart.cart + " items";
+    cartView.renderCart(cart.data);
+  } catch (err) {
+    console.log(CONSTANS.ERROR_MSG.REMOVEFROMCART, err);
+  }
+};
+
 document.addEventListener("click", function(el) {
   const cartModal = elements.cartModal;
   if (el.target && el.target.className == elements.cartPlus) {
-    addToCarts(el.target.id);
+    addToCart(el.target.id);
   } else if (el.target && el.target.className == elements.cartMinus) {
-    //todo remove item from cart
+    removeFromCart(el.target.id);
   } else if (
     el.target &&
     (el.target.className == elements.cartClose || event.target == cartModal)

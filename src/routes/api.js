@@ -21,22 +21,46 @@ router.get("/getCategories", function(req, res) {
 router.post("/addToCart", function(req, res) {
   cart.push(req.body.productId);
   addToCart.cart = cart.length;
+  const cartData = cartList();
+  addToCart.data = cartData;
+  res.json(addToCart);
+});
+
+router.post("/removeFromCart", function(req, res) {
+  const index = cart.indexOf(req.body.productId);
+  if (index !== -1) cart.splice(index, 1);
+  addToCart.cart = cart.length;
+  const cartData = cartList();
+  addToCart.data = cartData;
   res.json(addToCart);
 });
 
 router.get("/getCartList", function(req, res) {
-  const cartList = { totalPrice: "567", data: [] };
-  if (cart.length > 0) {
-    let product = {
-      imageURL: "/static/images/products/fruit-n-veg/apple.jpg",
-      name: "Apple - Washington, Regular, 4 pcs",
-      price: "187",
-      quantity: "2",
-      totalPrice: "666"
-    };
-    cartList.data.push(product);
-  }
-  res.json(cartList);
+  const cartData = cartList();
+  res.json(cartData);
 });
+
+const cartList = () => {
+  var cartData = {};
+  cart.forEach(function(i) {
+    cartData[i] = (cartData[i] || 0) + 1;
+  });
+
+  const cartListData = { data: [] };
+
+  products.forEach(function(product) {
+    if (cartData[product.id]) {
+      let data = {
+        imageURL: product.imageURL,
+        name: product.name,
+        price: product.price,
+        quantity: cartData[product.id],
+        id: product.id
+      };
+      cartListData.data.push(data);
+    }
+  });
+  return cartListData;
+};
 
 module.exports = router;

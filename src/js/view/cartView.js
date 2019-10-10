@@ -35,7 +35,8 @@ const cartListView = value => {
           <button class="btn cart-plus" id=${value.id}>&#43;</button>
           <span class="multiplication">&#215;</span>
           <span class="price"> ${CONSTANS.RS} ${value.price}</span>
-          <span class="total"> ${CONSTANS.RS} ${value.totalPrice}</span>
+          <span class="total"> ${CONSTANS.RS} ${value.quantity *
+    value.price}</span>
         </div>              
       </div>           
     <li>`;
@@ -79,7 +80,12 @@ export const renderCart = cartList => {
   elements.cartModal.innerHTML = "";
   elements.cartModal.insertAdjacentHTML("beforeend", markup);
   if (!isCartEmpty) {
-    renderPrice(cartList.totalPrice);
+    const totalPrice = cartList.data.reduce(calculateTotalPrice, 0);
+    renderPrice(totalPrice);
     renderCartList(cartList.data);
   }
 };
+
+function calculateTotalPrice(total, num) {
+  return total + num.price * num.quantity;
+}

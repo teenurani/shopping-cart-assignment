@@ -21,6 +21,21 @@ export const addToCarts = async productId => {
     const results = await postData(data);
     return results;
   } catch (err) {
-    console.log(CONSTANS.errorMsg.addToCarts, err);
+    console.log(CONSTANS.errorMsg.ADDTOCART, err);
+  }
+};
+
+export const removeFromCarts = async productId => {
+  let data = {
+    url: CONSTANS.END_POINTS.REMOVEFROMCART,
+    body: {
+      productId: productId
+    }
+  };
+  try {
+    const results = await postData(data);
+    return results;
+  } catch (err) {
+    console.log(CONSTANS.errorMsg.REMOVEFROMCART, err);
   }
 };
