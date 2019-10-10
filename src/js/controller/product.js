@@ -35,9 +35,10 @@ const controlCategories = async () => {
 };
 
 const addToCart = async productId => {
-  // Search for the Categories
+  // Update cart value on click of buy-now button
   try {
     const cart = await addToCarts(productId);
+    // render result on UI
     elements.cartItem.textContent = cart.cart + " items";
   } catch (err) {
     console.log(CONSTANS.ERROR_MSG.ADDTOCART, err);
@@ -50,6 +51,7 @@ if (elements.currentURL == CONSTANS.CURRENT_URL.PRODUCT) {
 
   document.addEventListener("click", function(el) {
     if (el.target && el.target.className == elements.productCategoryItem) {
+      //handel event on selection of category and render UI
       el.target.parentElement
         .querySelectorAll(elements.productCategoryItemClass)
         .forEach(function(el) {
@@ -57,9 +59,17 @@ if (elements.currentURL == CONSTANS.CURRENT_URL.PRODUCT) {
         });
       el.target.classList.add(elements.hightlightClass);
       controlProduct(el.target.id);
-    }
-    if (el.target && el.target.className == elements.buyNow) {
+    } else if (el.target && el.target.className == elements.buyNow) {
+      // handel event on buy-now button
       addToCart(el.target.id);
+    } else if (
+      el.target &&
+      el.target.className ==
+        elements.productCategoryItem + " " + elements.hightlightClass
+    ) {
+      //handel event on unselect of category and render UI
+      el.target.classList.remove(elements.hightlightClass);
+      controlProduct();
     }
   });
 }
