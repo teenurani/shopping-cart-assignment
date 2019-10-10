@@ -19,13 +19,10 @@ router.get("/getCategories", function(req, res) {
 });
 
 router.post("/addToCart", function(req, res) {
-  console.log("productId", req.body);
   cart.push(req.body.productId);
   addToCart.cart = cart.length;
   res.json(addToCart);
 });
-
-router.post("/removeFromCart", function(req, res) {});
 
 router.get("/getCartList", function(req, res) {
   const cartList = { totalPrice: "567", data: [] };
@@ -37,14 +34,9 @@ router.get("/getCartList", function(req, res) {
       quantity: "2",
       totalPrice: "666"
     };
-    // cartList.data.push(product);
-    // for (let i = 0; i < cart.length; i++) {
-    //   for (let j = 0; j < product.length; j++) {
-
-    //   }
-    // }
-    res.json(cartList);
+    cartList.data.push(product);
   }
+  res.json(cartList);
 });
 
 module.exports = router;

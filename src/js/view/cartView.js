@@ -74,9 +74,9 @@ const renderCartList = values => {
 };
 
 export const renderCart = cartList => {
-  console.log("cartList ", cartList);
   let isCartEmpty = cartList.data.length == 0 ? true : false;
   let markup = isCartEmpty ? emptyCartMarkup : cartMarkup;
+  elements.cartModal.innerHTML = "";
   elements.cartModal.insertAdjacentHTML("beforeend", markup);
   if (!isCartEmpty) {
     renderPrice(cartList.totalPrice);

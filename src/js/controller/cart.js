@@ -9,7 +9,6 @@ export const controlCart = async () => {
   // Search for the Banners
   try {
     state.cartList = await getCarts();
-    console.log("state.cartList ", state.cartList);
   } catch (err) {
     console.log(CONSTANS.ERROR_MSG.BANNERS, err);
   }
@@ -18,9 +17,15 @@ export const controlCart = async () => {
 };
 
 document.addEventListener("click", function(el) {
+  const cartModal = elements.cartModal;
   if (el.target && el.target.className == elements.cartPlus) {
     addToCarts(el.target.id);
   } else if (el.target && el.target.className == elements.cartMinus) {
     //todo remove item from cart
+  } else if (
+    el.target &&
+    (el.target.className == elements.cartClose || event.target == cartModal)
+  ) {
+    cartModal.style.display = "none";
   }
 });

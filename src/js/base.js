@@ -16,7 +16,7 @@ export const elements = {
   cartList: document.getElementsByClassName("cart__product__list"),
   cartModal: document.getElementById("cart__modal"),
   cart: document.getElementById("cart"),
-  cartClose: document.getElementsByClassName("close"),
+  cartClose: "close",
   buyNow: "btn buy-now",
   cartPlus: "btn cart-plus",
   cartMinus: "btn cart-minus",
