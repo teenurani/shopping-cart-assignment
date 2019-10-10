@@ -4,9 +4,10 @@
       "env",
       {
         "targets": {
-          "browsers": ["last 5 versions", "ie >= 8"]
+          "browsers": ["last 2 Chrome versions"]
         }
       }
     ]
   ]
 }
+

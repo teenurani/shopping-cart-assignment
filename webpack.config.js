@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: ["babel-polyfill", "./src/main.js"],
+  entry: ["./src/main.js"],
   mode: "development",
   output: {
     filename: "main-bundle.js",
@@ -73,18 +73,7 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.hbs$/,
-        use: [
-          {
-            loader: "handlebars-loader",
-            query: {
-              inlineRequires: "/images/"
-            }
-          }
-        ]
-      }
+      }      
     ]
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
