@@ -7,7 +7,8 @@ export const CONSTANS = {
     PRODUCTS: url + "/api/getProductList",
     ADDTOCART: url + "/api/addToCart",
     CARTS: url + "/api/getCartList",
-    REMOVEFROMCART: url + "/api/removeFromCart"
+    REMOVEFROMCART: url + "/api/removeFromCart",
+    CARTITEMS: url + "/api/cartItems"
   },
   ERROR_MSG: {
     BANNERS: "Error in processing banners list ",
@@ -15,7 +16,8 @@ export const CONSTANS = {
     PRODUCTS: "Error in processing product list ",
     ADDTOCART: "Error in processing add to cart or buy now ",
     REMOVEFROMCART: "Error in processing remove from cart ",
-    CARTS: "Error in processing cart list "
+    CARTS: "Error in processing cart list ",
+    CARTITEMS: "Error in processing cart Items "
   },
   CURRENT_URL: {
     LOGIN: "/login",

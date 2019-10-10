@@ -40,6 +40,10 @@ router.get("/getCartList", function(req, res) {
   res.json(cartData);
 });
 
+router.get("/cartItems", function(req, res) {
+  res.json(cart.length);
+});
+
 const cartList = () => {
   var cartData = {};
   cart.forEach(function(i) {

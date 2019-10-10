@@ -1,6 +1,15 @@
 import { getResults, postData } from "../api";
 import { CONSTANS } from "../constants";
 
+export const getCartItems = async () => {
+  try {
+    const results = await getResults(CONSTANS.END_POINTS.CARTITEMS);
+    return results;
+  } catch (err) {
+    console.log(CONSTANS.errorMsg.CARTITEMS, err);
+  }
+};
+
 export const getCarts = async () => {
   try {
     const results = await getResults(CONSTANS.END_POINTS.CARTS);
