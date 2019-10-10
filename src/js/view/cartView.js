@@ -70,8 +70,14 @@ const renderPrice = price => {
   footer.insertAdjacentHTML("beforeend", markup);
 };
 
+// render cart list(when cart is not empty)
 const renderCartList = values => {
   values.forEach(cartListView);
+};
+
+//calculate total price
+const calculateTotalPrice = (total, num) => {
+  return total + num.price * num.quantity;
 };
 
 export const renderCart = cartList => {
@@ -85,7 +91,3 @@ export const renderCart = cartList => {
     renderCartList(cartList.data);
   }
 };
-
-function calculateTotalPrice(total, num) {
-  return total + num.price * num.quantity;
-}

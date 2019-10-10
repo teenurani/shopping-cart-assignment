@@ -17,22 +17,24 @@ export const controlCart = async () => {
 };
 
 const addToCart = async productId => {
-  // Search for the Categories
+  // add item to cart
   try {
     const cart = await addToCarts(productId);
+    // render result on UI
     elements.cartItem.textContent = cart.cart + " items";
-    cartView.renderCart(cart.data);
+    // cartView.renderCart(cart.data);
   } catch (err) {
     console.log(CONSTANS.ERROR_MSG.ADDTOCART, err);
   }
 };
 
 const removeFromCart = async productId => {
-  // Search for the Categories
+  // remove item from cart
   try {
     const cart = await removeFromCarts(productId);
+    // render result on UI
     elements.cartItem.textContent = cart.cart + " items";
-    cartView.renderCart(cart.data);
+    // cartView.renderCart(cart.data);
   } catch (err) {
     console.log(CONSTANS.ERROR_MSG.REMOVEFROMCART, err);
   }
@@ -41,8 +43,31 @@ const removeFromCart = async productId => {
 document.addEventListener("click", function(el) {
   const cartModal = elements.cartModal;
   if (el.target && el.target.className == elements.cartPlus) {
+    //update quantity
+    el.target.previousElementSibling.textContent =
+      +el.target.previousElementSibling.textContent + 1;
+
+    //update price
+    el.target.parentElement.children[5].textContent =
+      "Rs " +
+      +el.target.previousElementSibling.textContent *
+        el.target.parentElement.children[4].textContent.split(" ")[3];
+
     addToCart(el.target.id);
   } else if (el.target && el.target.className == elements.cartMinus) {
+    // remove li if quantity is 0 
+    if (el.target.nextElementSibling.textContent == 1)
+      el.target.parentElement.parentElement.parentElement.style.display = "none";
+    //update quantity
+    el.target.nextElementSibling.textContent =
+      el.target.nextElementSibling.textContent - 1;
+
+    //update price
+    el.target.parentElement.children[5].textContent =
+      "Rs " +
+      +el.target.nextElementSibling.textContent *
+        el.target.parentElement.children[4].textContent.split(" ")[3];
+
     removeFromCart(el.target.id);
   } else if (
     el.target &&
