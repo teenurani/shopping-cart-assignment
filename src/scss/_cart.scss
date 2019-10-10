@@ -39,6 +39,7 @@
     &--body {
       background-color: $background-color;
       height: 80%;
+      overflow: scroll;
       .cart__product {
         &__list {
           &--item {
