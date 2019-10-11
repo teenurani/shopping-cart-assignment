@@ -61,7 +61,7 @@ const emptyCartMarkup = `
 
 const renderPrice = price => {
   const markup = ` 
-  <a href="/product" class="btn btn-lg">
+  <a class="btn btn-lg">
     ${CONSTANS.cart.footer_btn}   
     <span>${CONSTANS.RS}${price}&nbsp;&nbsp;&nbsp;></span>     
   </a>`;
