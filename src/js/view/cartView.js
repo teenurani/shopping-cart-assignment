@@ -1,12 +1,17 @@
 import { CONSTANS } from "../constants";
 import { elements } from "../base";
 
-const cartMarkup = `
+const mainMarkup = `
   <div class="cart__content">
     <div class="cart__content--header">
         <h3>${CONSTANS.cart.main_heading}</h3>
         <span class="close">&times;</span>     
     </div>
+    <div id="cart__modal__content">
+    </div>
+  </div>`;
+
+const cartMarkup = `  
     <main class="cart__content--body"> 
       <div class="cart__product">
         <ul class="cart__product__list">              
@@ -19,13 +24,12 @@ const cartMarkup = `
     </main>    
     <div class="cart__content--footer">
       <p>${CONSTANS.cart.footer_promo}</p>      
-    </div>    
-  </div>
-`;
+    </div>   
+    `;
 
 const cartListView = value => {
   const markup = `
-    <li class="cart__product__list--item">          
+    <li class="cart__product__list--item cart-${value.id}">          
       <img src="../../..${value.imageURL}" />
       <div class="cart__detail">
         <h3>${value.name}</h3>
@@ -43,12 +47,7 @@ const cartListView = value => {
   elements.cartList[0].insertAdjacentHTML("beforeend", markup);
 };
 
-const emptyCartMarkup = `
-  <div class="cart__content">
-    <div class="cart__content--header">
-        <h3>${CONSTANS.cart.main_heading}</h3>
-        <span class="close">&times;</span>     
-    </div>
+const emptyCartMarkup = `  
     <main class="cart__content--body">
       <div class="cart__content--body__empty">
         <h3>${CONSTANS.cart.empty_heading}</h3>
@@ -58,13 +57,13 @@ const emptyCartMarkup = `
     <div class="cart__content--footer__empty">
       <a href="/product" class="btn btn-lg">${CONSTANS.cart.empty_footer_btn}</a>
     </div>
-  </div>`;
+  `;
 
 const renderPrice = price => {
   const markup = ` 
   <a href="/product" class="btn btn-lg">
     ${CONSTANS.cart.footer_btn}   
-    <span> ${CONSTANS.RS} ${price}&nbsp;&nbsp;&nbsp; ></span>     
+    <span>${CONSTANS.RS}${price}&nbsp;&nbsp;&nbsp;></span>     
   </a>`;
   const footer = document.getElementsByClassName("cart__content--footer")[0];
   footer.insertAdjacentHTML("beforeend", markup);
@@ -83,11 +82,20 @@ const calculateTotalPrice = (total, num) => {
 export const renderCart = cartList => {
   let isCartEmpty = cartList.data.length == 0 ? true : false;
   let markup = isCartEmpty ? emptyCartMarkup : cartMarkup;
-  elements.cartModal.innerHTML = "";
-  elements.cartModal.insertAdjacentHTML("beforeend", markup);
+  //render UI
+  const cartContent = document.getElementById("cart__modal__content");
+  cartContent.innerHTML = "";
+  cartContent.insertAdjacentHTML("beforeend", markup);
+
   if (!isCartEmpty) {
     const totalPrice = cartList.data.reduce(calculateTotalPrice, 0);
     renderPrice(totalPrice);
     renderCartList(cartList.data);
   }
+};
+
+// render static data
+export const renderStaticContent = () => {
+  elements.cartModal.innerHTML = "";
+  elements.cartModal.insertAdjacentHTML("beforeend", mainMarkup);
 };

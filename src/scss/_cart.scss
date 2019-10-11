@@ -18,7 +18,7 @@
     width: 20rem;
     right: 10rem;
     height: 87.5%;
-    background-color: $background-color-2;
+    background-color: $background-color;
     animation-name: slideIn;
     animation-duration: 0.4s;
     &--header {
@@ -38,8 +38,7 @@
     }
     &--body {
       background-color: $background-color;
-      height: 80%;
-      overflow: auto;
+      margin-bottom: 2rem;
       .cart__product {
         &__list {
           &--item {
@@ -105,8 +104,11 @@
           font-size: $font-size-sm;
         }
       }
-    }    
-
+    }
+    #cart__modal__content {
+      height: 80%;
+      overflow: auto;
+    }
     &--footer,
     &--footer__empty {
       bottom: 0;

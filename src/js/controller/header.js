@@ -2,6 +2,7 @@ import { elements } from "../base";
 import { controlCart } from "./cart";
 import { getCartItems } from "../model/Cart";
 import { CONSTANS } from "../constants";
+import * as cartView from "../view/cartView";
 
 // Get the cartModal
 const cartModal = elements.cartModal;
@@ -12,6 +13,7 @@ const cartBtn = elements.cart;
 // When the user clicks the button, open the cartModal
 cartBtn.onclick = function() {
   cartModal.style.display = "block";
+  cartView.renderStaticContent();
   controlCart();
 };
 

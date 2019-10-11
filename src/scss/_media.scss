@@ -40,6 +40,9 @@
   .cart__content {
     right: 0;
   }
+  .border-block img {
+    max-width: 668px;
+  }
 }
 
 /* 
@@ -55,7 +58,7 @@
   }
 
   .main__header .nav {
-    grid-template-columns: 25% 35% 50%;
+    grid-template-columns: 25% 35% 40%;
     a img {
       width: 100%;
       margin-left: 0.5rem;
@@ -122,5 +125,8 @@
   }
   .cart__content {
     right: 0;
+  }
+  .border-block img {
+    max-width: 380px;
   }
 }
