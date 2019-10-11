@@ -6,6 +6,10 @@ window.carousel = (() => {
     showSlides(slideIndex);
   }, 100);
 
+  setInterval(() => {
+    showSlides((slideIndex = slideIndex + 1));
+  }, 2000);
+
   return {
     plusSlides: n => {
       showSlides((slideIndex += n));
