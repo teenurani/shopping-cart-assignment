@@ -129,4 +129,12 @@
   .border-block img {
     max-width: 380px;
   }
+
+  .cart__content {
+    width: 26rem;
+  }
+  .cart__content--footer a,
+  .cart__content--footer__empty a {
+    width: 24rem;
+  }
 }
