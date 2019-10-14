@@ -29,7 +29,7 @@
           display: none;
         }
         .price__info--ipad {
-          display: block;
+          display: flex;
           clear: both;
         }
       }
@@ -122,8 +122,7 @@
           display: none;
         }
         .price__info--ipad {
-          display: block;
-          margin-left: 0.1rem;
+          display: flex;
         }
       }
     }
@@ -136,10 +135,13 @@
   }
 
   .cart__content {
-    width: 26rem;
+    width: 100%;
   }
-  .cart__content--footer a,
-  .cart__content--footer__empty a {
-    width: 24rem;
+  .cart__content--footer,
+  .cart__content--footer__empty {
+    width: 100%;
+    a {
+      width: 92%;
+    }
   }
 }

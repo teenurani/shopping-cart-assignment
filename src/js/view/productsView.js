@@ -11,8 +11,8 @@ const productsView = product => {
       <span>${CONSTANS.MRP} ${CONSTANS.RS} ${product.price}</span>
       <a class="btn buy-now" id="${product.id}">${CONSTANS.BUY}</a>
     </div>
-    <div class="price__info--ipad btn">    
-      <a class="btn buy-now" id="${product.id}">${CONSTANS.BUY} @ ${CONSTANS.RS} ${product.price}</a>
+    <div class="price__info--ipad">    
+      <a class="btn btn-lg buy-now" id="${product.id}">${CONSTANS.BUY} @ ${CONSTANS.RS} ${product.price}</a>
     </div>
   </li>`;
 
