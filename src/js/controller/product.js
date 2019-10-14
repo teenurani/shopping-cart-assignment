@@ -64,7 +64,7 @@ if (CONSTANS.currentURL == CONSTANS.PAGE_URL.PRODUCT) {
       controlProduct(el.target.id);
     } else if (el.target.classList.contains(CART_SELECTOR.buyNow)) {
       // handel event on buy-now button
-      addToCart(el.target.id);
+      addToCart(el.target.name);
     } else if (
       el.target &&
       el.target.className ==
