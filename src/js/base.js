@@ -25,7 +25,7 @@ export const CART_SELECTOR = {
   cartModal: document.getElementById("cart__modal"),
   cart: document.getElementById("cart"),
   cartClose: "close",
-  buyNow: "btn buy-now",
+  buyNow: "buy-now",
   cartPlus: "btn cart-plus",
   cartMinus: "btn cart-minus",
   cartItem: document.querySelector("#cart span")

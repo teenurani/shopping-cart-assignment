@@ -62,7 +62,7 @@ if (CONSTANS.currentURL == CONSTANS.PAGE_URL.PRODUCT) {
         });
       el.target.classList.add(PRODUCT_SELECTOR.hightlightClass);
       controlProduct(el.target.id);
-    } else if (el.target && el.target.className == CART_SELECTOR.buyNow) {
+    } else if (el.target.classList.contains(CART_SELECTOR.buyNow)) {
       // handel event on buy-now button
       addToCart(el.target.id);
     } else if (

@@ -32,9 +32,7 @@ const categoriesDroprownView = category => {
 export const renderCategories = products => {
   PRODUCT_SELECTOR.categoryList.innerHTML = "";
   products.forEach(categoriesView);
-  if (screen && screen.width <= 480) {
-    products.forEach(categoriesDroprownView);
-  }
+  products.forEach(categoriesDroprownView);
 };
 
 export const renderProducts = products => {
