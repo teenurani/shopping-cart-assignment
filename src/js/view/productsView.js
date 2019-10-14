@@ -24,9 +24,17 @@ const categoriesView = category => {
   PRODUCT_SELECTOR.categoryList.insertAdjacentHTML("beforeend", markup);
 };
 
+const categoriesDroprownView = category => {
+  const markup = `<option value="${category.id}"> ${category.name} </option>`;
+  PRODUCT_SELECTOR.categoryDropdown.insertAdjacentHTML("beforeend", markup);
+};
+
 export const renderCategories = products => {
   PRODUCT_SELECTOR.categoryList.innerHTML = "";
   products.forEach(categoriesView);
+  if (screen && screen.width <= 480) {
+    products.forEach(categoriesDroprownView);
+  }
 };
 
 export const renderProducts = products => {

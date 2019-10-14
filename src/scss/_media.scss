@@ -101,6 +101,9 @@
     &__sidebar {
       display: none;
     }
+    &__sidebar__sm {
+      display: block;
+    }
     &__info__list {
       grid-template-columns: 100%;
       &--item {

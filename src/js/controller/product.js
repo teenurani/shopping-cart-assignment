@@ -77,4 +77,9 @@ if (CONSTANS.currentURL == CONSTANS.PAGE_URL.PRODUCT) {
       controlProduct();
     }
   });
+
+  //Mobile view category handler
+  PRODUCT_SELECTOR.categoryDropdown.addEventListener("change", function(e) {
+    controlProduct(e.target.value);
+  });
 }
