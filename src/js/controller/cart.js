@@ -1,7 +1,7 @@
 import { getCarts, addToCarts, removeFromCarts } from "../model/Cart";
 import * as cartView from "../view/cartView";
 import { CONSTANS } from "../constants";
-import { elements } from "../base";
+import { CART_SELECTOR } from "../base";
 
 const state = {};
 
@@ -21,7 +21,7 @@ const addToCart = async productId => {
   try {
     const cart = await addToCarts(productId);
     // render result on UI
-    elements.cartItem.textContent = cart.cart + " items";
+    CART_SELECTOR.cartItem.textContent = cart.cart + " items";
     //render cart UI
     cartView.renderCart(cart.data);
   } catch (err) {
@@ -34,7 +34,7 @@ const removeFromCart = async productId => {
   try {
     const cart = await removeFromCarts(productId);
     // render result on UI
-    elements.cartItem.textContent = cart.cart + " items";
+    CART_SELECTOR.cartItem.textContent = cart.cart + " items";
     //render cart UI
     cartView.renderCart(cart.data);
   } catch (err) {
@@ -43,14 +43,14 @@ const removeFromCart = async productId => {
 };
 
 document.addEventListener("click", function(el) {
-  const cartModal = elements.cartModal;
-  if (el.target && el.target.className == elements.cartPlus) {
+  const cartModal = CART_SELECTOR.cartModal;
+  if (el.target && el.target.className == CART_SELECTOR.cartPlus) {
     addToCart(el.target.id);
-  } else if (el.target && el.target.className == elements.cartMinus) {
+  } else if (el.target && el.target.className == CART_SELECTOR.cartMinus) {
     removeFromCart(el.target.id);
   } else if (
     el.target &&
-    (el.target.className == elements.cartClose || event.target == cartModal)
+    (el.target.className == CART_SELECTOR.cartClose || event.target == cartModal)
   ) {
     cartModal.style.display = "none";
   }

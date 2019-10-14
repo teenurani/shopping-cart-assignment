@@ -35,7 +35,7 @@ const controlDots = () => {
   homeView.renderDots(state.dotArray);
 };
 
-if (elements.currentURL == CONSTANS.CURRENT_URL.HOME) {
+if (CONSTANS.currentURL == CONSTANS.PAGE_URL.HOME) {
   controlBanners();
   controlCategories();
 

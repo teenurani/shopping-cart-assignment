@@ -1,4 +1,4 @@
-import { elements } from "../base";
+import { PRODUCT_SELECTOR } from "../base";
 import { CONSTANS } from "../constants";
 
 const productsView = product => {
@@ -16,20 +16,20 @@ const productsView = product => {
     </div>
   </li>`;
 
-  elements.productList.insertAdjacentHTML("beforeend", markup);
+  PRODUCT_SELECTOR.productList.insertAdjacentHTML("beforeend", markup);
 };
 
 const categoriesView = category => {
   const markup = `<li class="product__sidebar__list--item" id="${category.id}"> ${category.name} </li>`;
-  elements.categoryList.insertAdjacentHTML("beforeend", markup);
+  PRODUCT_SELECTOR.categoryList.insertAdjacentHTML("beforeend", markup);
 };
 
 export const renderCategories = products => {
-  elements.categoryList.innerHTML = "";
+  PRODUCT_SELECTOR.categoryList.innerHTML = "";
   products.forEach(categoriesView);
 };
 
 export const renderProducts = products => {
-  elements.productList.innerHTML = "";
+  PRODUCT_SELECTOR.productList.innerHTML = "";
   products.forEach(productsView);
 };

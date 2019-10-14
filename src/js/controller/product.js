@@ -1,6 +1,6 @@
 import Prducts from "../model/Products";
 import * as productsView from "../view/productsView";
-import { elements } from "../base";
+import { PRODUCT_SELECTOR, CART_SELECTOR } from "../base";
 import { getCategories } from "../model/Category";
 import { addToCarts } from "../model/Cart";
 import { CONSTANS } from "../constants";
@@ -39,36 +39,41 @@ const addToCart = async productId => {
   try {
     const cart = await addToCarts(productId);
     // render result on UI
-    elements.cartItem.textContent = cart.cart + " items";
+    CART_SELECTOR.cartItem.textContent = cart.cart + " items";
   } catch (err) {
     console.log(CONSTANS.ERROR_MSG.ADDTOCART, err);
   }
 };
 
-if (elements.currentURL == CONSTANS.CURRENT_URL.PRODUCT) {
+if (CONSTANS.currentURL == CONSTANS.PAGE_URL.PRODUCT) {
   controlCategories();
   controlProduct();
 
   document.addEventListener("click", function(el) {
-    if (el.target && el.target.className == elements.productCategoryItem) {
+    if (
+      el.target &&
+      el.target.className == PRODUCT_SELECTOR.productCategoryItem
+    ) {
       //handel event on selection of category and render UI
       el.target.parentElement
-        .querySelectorAll(elements.productCategoryItemClass)
+        .querySelectorAll(PRODUCT_SELECTOR.productCategoryItemClass)
         .forEach(function(el) {
-          el.classList.remove(elements.hightlightClass);
+          el.classList.remove(PRODUCT_SELECTOR.hightlightClass);
         });
-      el.target.classList.add(elements.hightlightClass);
+      el.target.classList.add(PRODUCT_SELECTOR.hightlightClass);
       controlProduct(el.target.id);
-    } else if (el.target && el.target.className == elements.buyNow) {
+    } else if (el.target && el.target.className == CART_SELECTOR.buyNow) {
       // handel event on buy-now button
       addToCart(el.target.id);
     } else if (
       el.target &&
       el.target.className ==
-        elements.productCategoryItem + " " + elements.hightlightClass
+        PRODUCT_SELECTOR.productCategoryItem +
+          " " +
+          PRODUCT_SELECTOR.hightlightClass
     ) {
       //handel event on unselect of category and render UI
-      el.target.classList.remove(elements.hightlightClass);
+      el.target.classList.remove(PRODUCT_SELECTOR.hightlightClass);
       controlProduct();
     }
   });

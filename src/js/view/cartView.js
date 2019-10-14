@@ -1,10 +1,10 @@
 import { CONSTANS } from "../constants";
-import { elements } from "../base";
+import { CART_SELECTOR } from "../base";
 
 const mainMarkup = `
   <div class="cart__content">
     <div class="cart__content--header">
-        <h3>${CONSTANS.cart.main_heading}</h3>
+        <h3>${CONSTANS.CART.MAIN_HEADING}</h3>
         <span class="close">&times;</span>     
     </div>
     <div id="cart__modal__content">
@@ -18,12 +18,12 @@ const cartMarkup = `
         </ul>
         <div class="tagline">
           <img src="../../../static/images/lowest-price.png" />
-          <span>${CONSTANS.cart.tagline_text}</span>
+          <span>${CONSTANS.CART.TAGLINE_TEXT}</span>
         </div>
       </div>    
     </main>    
     <div class="cart__content--footer">
-      <p>${CONSTANS.cart.footer_promo}</p>      
+      <p>${CONSTANS.CART.FOOTER_PROMO}</p>      
     </div>   
     `;
 
@@ -44,25 +44,25 @@ const cartListView = value => {
         </div>              
       </div>           
     <li>`;
-  elements.cartList[0].insertAdjacentHTML("beforeend", markup);
+  CART_SELECTOR.cartList[0].insertAdjacentHTML("beforeend", markup);
 };
 
 const emptyCartMarkup = `  
     <main class="cart__content--body">
       <div class="cart__content--body__empty">
-        <h3>${CONSTANS.cart.empty_heading}</h3>
-        <p>${CONSTANS.cart.empty_content}</p>
+        <h3>${CONSTANS.CART.EMPTY_HEADING}</h3>
+        <p>${CONSTANS.CART.EMPTY_CONTENT}</p>
       </div>
     </main>    
     <div class="cart__content--footer__empty">
-      <a href="/product" class="btn btn-lg">${CONSTANS.cart.empty_footer_btn}</a>
+      <a href="/product" class="btn btn-lg">${CONSTANS.CART.EMPTY_FOOTER_BTN}</a>
     </div>
   `;
 
 const renderPrice = price => {
   const markup = ` 
   <a class="btn btn-lg">
-    ${CONSTANS.cart.footer_btn}   
+    ${CONSTANS.CART.FOOTER_BTN}   
     <span>${CONSTANS.RS}${price}&nbsp;&nbsp;&nbsp;></span>     
   </a>`;
   const footer = document.getElementsByClassName("cart__content--footer")[0];
@@ -96,6 +96,6 @@ export const renderCart = cartList => {
 
 // render static data
 export const renderStaticContent = () => {
-  elements.cartModal.innerHTML = "";
-  elements.cartModal.insertAdjacentHTML("beforeend", mainMarkup);
+  CART_SELECTOR.cartModal.innerHTML = "";
+  CART_SELECTOR.cartModal.insertAdjacentHTML("beforeend", mainMarkup);
 };

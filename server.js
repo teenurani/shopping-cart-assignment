@@ -48,13 +48,13 @@ app.use(staticMiddleware);
 // webpack setup end
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) { 
+app.use(function(req, res, next) {
   var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 //Server listen on port
-var port = process.env.PORT || 3000;
+var port = 3000;
 app.listen(port);
 console.log("Server running at port " + port);

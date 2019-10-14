@@ -1,5 +1,5 @@
 import { CONSTANS } from "../constants";
-import { elements } from "../base";
+import { AUTH_SELECTOR } from "../base";
 
 const state = {};
 
@@ -39,8 +39,8 @@ state.validateForm = e => {
         count = 0;
       }
       if (
-        item.id === elements.confirmPassword &&
-        item.value.localeCompare(elements.getPassword.value)
+        item.id === AUTH_SELECTOR.confirmPassword &&
+        item.value.localeCompare(AUTH_SELECTOR.getPassword.value)
       ) {
         errorMsg = CONSTANS.PASSWORD_MISSMATCH;
         count = 0;
@@ -69,7 +69,7 @@ state.init = () => {
   state.validate(CONSTANS.SUBMIT);
 };
 
-if (elements.currentURL == CONSTANS.CURRENT_URL.REGISTER) {
+if (CONSTANS.currentURL == CONSTANS.PAGE_URL.REGISTER) {
   //initialize function
   state.init();
 }

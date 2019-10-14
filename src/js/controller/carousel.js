@@ -1,4 +1,4 @@
-import { elements } from "../base";
+import { CAROUSEL_SELECTOR } from "../base";
 
 window.carousel = (() => {
   var slideIndex = 1;
@@ -21,8 +21,8 @@ window.carousel = (() => {
 
   function showSlides(n) {
     var i;
-    var slides = elements.carouselItem;
-    var dots = elements.bannersDot;
+    var slides = CAROUSEL_SELECTOR.carouselItem;
+    var dots = CAROUSEL_SELECTOR.bannersDot;
     if (n > slides.length) {
       slideIndex = 1;
     }

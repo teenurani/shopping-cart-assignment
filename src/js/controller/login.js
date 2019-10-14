@@ -60,7 +60,7 @@ state.init = () => {
   state.validate(CONSTANS.SUBMIT);
 };
 
-if (elements.currentURL == CONSTANS.CURRENT_URL.LOGIN) {
+if (CONSTANS.currentURL == CONSTANS.PAGE_URL.LOGIN) {
   //initialize function
   state.init();
 }

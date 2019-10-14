@@ -1,11 +1,11 @@
-import { elements } from "../base";
+import { HOME_SELECTOR, CAROUSEL_SELECTOR } from "../base";
 
 const bannersView = banner => {
   const markup = `
   <div class="carousel__item">
     <img src=${banner.bannerImageUrl} alt=${banner.bannerImageAlt} style="width:100%" />
   </div>`;
-  elements.bannersList.insertAdjacentHTML("beforebegin", markup);
+  HOME_SELECTOR.bannersList.insertAdjacentHTML("beforebegin", markup);
 };
 
 const categoriesView = category => {
@@ -23,12 +23,12 @@ const categoriesView = category => {
     <img src="/static/images/border.jpg" alt="border" />
       </div>
   </li>`;
-  elements.homeCategoryList.insertAdjacentHTML("beforeend", markup);
+  HOME_SELECTOR.homeCategoryList.insertAdjacentHTML("beforeend", markup);
 };
 
 const dotViews = dot => {
   const markup = `<span class="dot" onclick="window.carousel.currentSlide(${dot})"></span>`;
-  elements.bannersDotsList.insertAdjacentHTML("beforeend", markup);
+  CAROUSEL_SELECTOR.bannersDotsList.insertAdjacentHTML("beforeend", markup);
 };
 
 export const renderCategories = categories => {
