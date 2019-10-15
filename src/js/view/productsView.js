@@ -9,10 +9,10 @@ const productsView = product => {
     <p> ${product.description} </p>
     <div class="price__info">
       <span>${CONSTANS.MRP} ${CONSTANS.RS} ${product.price}</span>
-      <a class="btn buy-now" name="${product.id}">${CONSTANS.BUY}</a>
+      <button class="btn buy-now" name="${product.id}" tabindex="0">${CONSTANS.BUY}</button>
     </div>
     <div class="price__info--ipad">    
-      <a class="btn btn-lg buy-now" name="${product.id}">${CONSTANS.BUY} @ ${CONSTANS.RS} ${product.price}</a>
+      <button class="btn btn-lg buy-now" name="${product.id}" tabindex="0">${CONSTANS.BUY} @ ${CONSTANS.RS} ${product.price}</button>
     </div>
   </li>`;
 
@@ -20,7 +20,7 @@ const productsView = product => {
 };
 
 const categoriesView = category => {
-  const markup = `<li class="product__sidebar__list--item" id="${category.id}"> ${category.name} </li>`;
+  const markup = `<li class="product__sidebar__list--item" id="${category.id}" tabindex="0">${category.name}</li>`;
   PRODUCT_SELECTOR.categoryList.insertAdjacentHTML("beforeend", markup);
 };
 
