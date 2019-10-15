@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const hbs = require("express-handlebars");
 const templateRoutes = require("./src/routes/template");
 const apiRoutes = require("./src/routes/api");
+require("dotenv").config();
 
 const app = express();
 
@@ -55,6 +56,6 @@ app.use(function(req, res, next) {
 });
 
 //Server listen on port
-var port = 3000;
+var port = process.env.PORT || 3000;
 app.listen(port);
 console.log("Server running at port " + port);
