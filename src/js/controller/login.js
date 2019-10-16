@@ -1,11 +1,10 @@
-import { CONSTANS } from "../constants";
-import { elements } from "../base";
+import { CONSTANTS } from "../constants";
 
 const state = {};
 
 //Create private variable
-const form = document.getElementById(CONSTANS.LOGIN__FORM);
-const formInput = document.querySelectorAll(CONSTANS.LOGIN_FORM_INPUT_FIELD);
+const form = document.getElementById(CONSTANTS.LOGIN__FORM);
+const formInput = document.querySelectorAll(CONSTANTS.LOGIN_FORM_INPUT_FIELD);
 
 /**
  * private method to register listener to submit the form
@@ -25,27 +24,27 @@ state.validateForm = e => {
   let count = 1;
   formInput.forEach(function(item) {
     if (item.value === "" || !item.value) {
-      errorMsg = CONSTANS.EMPTY_ERROR_MSG;
+      errorMsg = CONSTANTS.EMPTY_ERROR_MSG;
       count = 0;
     } else {
       if (
-        item.type === CONSTANS.EMAIL &&
-        !item.value.match(CONSTANS.EMAIL_VALIDATION)
+        item.type === CONSTANTS.EMAIL &&
+        !item.value.match(CONSTANTS.EMAIL_VALIDATION)
       ) {
-        errorMsg = CONSTANS.EMAIL_ERROR_MSG;
+        errorMsg = CONSTANTS.EMAIL_ERROR_MSG;
         count = 0;
       }
       if (
-        item.type === CONSTANS.PASSWORD &&
+        item.type === CONSTANTS.PASSWORD &&
         (item.value.length < 6 ||
-          !item.value.match(CONSTANS.PASSWORD_VALIDATION))
+          !item.value.match(CONSTANTS.PASSWORD_VALIDATION))
       ) {
-        errorMsg = CONSTANS.PASSWORD_ERROR_MSG;
+        errorMsg = CONSTANTS.PASSWORD_ERROR_MSG;
         count = 0;
       }
     }
     let msgElement = item.parentElement.querySelectorAll(
-      CONSTANS.FORM_ERROR_CLASS
+      CONSTANTS.FORM_ERROR_CLASS
     )[0];
     msgElement.innerText = errorMsg;
     errorMsg = "";
@@ -57,10 +56,10 @@ state.validateForm = e => {
 
 // register listener to input fields
 state.init = () => {
-  state.validate(CONSTANS.SUBMIT);
+  state.validate(CONSTANTS.SUBMIT);
 };
 
-if (CONSTANS.currentURL == CONSTANS.PAGE_URL.LOGIN) {
+if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.LOGIN) {
   //initialize function
   state.init();
 }

@@ -1,13 +1,13 @@
-export const CONSTANS = {
+export const CONSTANTS = {
   currentURL: window.location.pathname,
   ERROR_MSG: {
     BANNERS: "Error in processing banners list ",
     CATEGORIES: "Error in processing category list ",
     PRODUCTS: "Error in processing product list ",
-    ADDTOCART: "Error in processing add to cart or buy now ",
-    REMOVEFROMCART: "Error in processing remove from cart ",
+    ADD_TO_CART: "Error in processing add to cart or buy now ",
+    REMOVE_FROM_CART: "Error in processing remove from cart ",
     CARTS: "Error in processing cart list ",
-    CARTITEMS: "Error in processing cart Items "
+    CART_ITEMS: "Error in processing cart Items "
   },
   PAGE_URL: {
     LOGIN: "/login",
@@ -23,10 +23,10 @@ export const CONSTANS = {
   EMAIL_VALIDATION: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
   PASSWORD_VALIDATION: /((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+[0-9a-z]+$/i,
   PASSWORD_ERROR_MSG:
-    "Password Field should be number and alphabet and minimum lenght 7!",
+    "Password Field should be number and alphabet and minimum length 7!",
   EMAIL_ERROR_MSG: "Invalid Email Address",
   EMPTY_ERROR_MSG: "Fields should not be empty!",
-  PASSWORD_MISSMATCH: "Mismatch password!",
+  PASSWORD_MISMATCH: "Mismatch password!",
   EMAIL: "email",
   PASSWORD: "password",
   SUBMIT: "submit",

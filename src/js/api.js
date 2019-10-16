@@ -1,3 +1,4 @@
+//helper function for get request
 export const getResults = async url => {
   try {
     const res = await fetch(url);
@@ -7,7 +8,7 @@ export const getResults = async url => {
     console.log(error);
   }
 };
-
+//helper function for post request
 export const postData = async data => {
   try {
     const res = await fetch(data.url, {

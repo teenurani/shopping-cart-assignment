@@ -1,7 +1,7 @@
 import { CART_SELECTOR } from "../base";
 import { controlCart } from "./cart";
 import { getCartItems } from "../model/Cart";
-import { CONSTANS } from "../constants";
+import { CONSTANTS } from "../constants";
 import * as cartView from "../view/cartView";
 
 // Get the cartModal
@@ -23,7 +23,7 @@ const cartItems = async () => {
     const cart = await getCartItems();
     CART_SELECTOR.cartItem.textContent = cart + " items";
   } catch (err) {
-    console.log(CONSTANS.ERROR_MSG.CARTITEMS, err);
+    console.log(CONSTANTS.ERROR_MSG.CART_ITEMS, err);
   }
 };
 

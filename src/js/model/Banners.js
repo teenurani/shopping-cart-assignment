@@ -1,5 +1,5 @@
 import { getResults } from "../api";
-import { CONSTANS } from "../constants";
+import { CONSTANTS } from "../constants";
 import { END_POINTS } from "../service";
 
 export const getBanners = async () => {
@@ -7,6 +7,6 @@ export const getBanners = async () => {
     const results = await getResults(END_POINTS.BANNERS);
     return results;
   } catch (err) {
-    console.log(CONSTANS.errorMsg.bannersList, err);
+    console.log(CONSTANTS.errorMsg.bannersList, err);
   }
 };

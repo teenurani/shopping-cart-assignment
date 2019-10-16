@@ -4,8 +4,8 @@ export const END_POINTS = {
   BANNERS: url + "/api/getBanners",
   CATEGORIES: url + "/api/getCategories",
   PRODUCTS: url + "/api/getProductList",
-  ADDTOCART: url + "/api/addToCart",
+  ADD_TO_CART: url + "/api/addToCart",
   CARTS: url + "/api/getCartList",
-  REMOVEFROMCART: url + "/api/removeFromCart",
-  CARTITEMS: url + "/api/cartItems"
+  REMOVE_FROM_CART: url + "/api/removeFromCart",
+  CART_ITEMS: url + "/api/cartItems"
 };

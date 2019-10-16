@@ -1,5 +1,5 @@
 import { getResults } from "../api";
-import { CONSTANS } from "../constants";
+import { CONSTANTS } from "../constants";
 import { END_POINTS } from "../service";
 
 export default class Products {
@@ -14,7 +14,7 @@ export default class Products {
         ? results.filter((val, index) => val.category == this.query)
         : results;
     } catch (error) {
-      console.log(CONSTANS.errorMsg.productList, error);
+      console.log(CONSTANTS.errorMsg.productList, error);
     }
   }
 }

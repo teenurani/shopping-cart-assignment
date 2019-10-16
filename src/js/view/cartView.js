@@ -1,10 +1,10 @@
-import { CONSTANS } from "../constants";
+import { CONSTANTS } from "../constants";
 import { CART_SELECTOR } from "../base";
 
 const mainMarkup = `
   <div class="cart__content">
     <div class="cart__content--header">
-        <h3>${CONSTANS.CART.MAIN_HEADING}</h3>
+        <h3>${CONSTANTS.CART.MAIN_HEADING}</h3>
         <span class="close">&times;</span>     
     </div>
     <div id="cart__modal__content">
@@ -18,12 +18,12 @@ const cartMarkup = `
         </ul>
         <div class="tagline">
           <img src="../../../static/images/lowest-price.png" />
-          <span>${CONSTANS.CART.TAGLINE_TEXT}</span>
+          <span>${CONSTANTS.CART.TAGLINE_TEXT}</span>
         </div>
       </div>    
     </main>    
     <div class="cart__content--footer">
-      <p>${CONSTANS.CART.FOOTER_PROMO}</p>      
+      <p>${CONSTANTS.CART.FOOTER_PROMO}</p>      
     </div>   
     `;
 
@@ -38,8 +38,8 @@ const cartListView = value => {
           <span class="items">${value.quantity}</span>
           <button class="btn cart-plus" id=${value.id}>&#43;</button>
           <span class="multiplication">&#215;</span>
-          <span class="price"> ${CONSTANS.RS} ${value.price}</span>
-          <span class="total"> ${CONSTANS.RS} ${value.quantity *
+          <span class="price"> ${CONSTANTS.RS} ${value.price}</span>
+          <span class="total"> ${CONSTANTS.RS} ${value.quantity *
     value.price}</span>
         </div>              
       </div>           
@@ -50,20 +50,20 @@ const cartListView = value => {
 const emptyCartMarkup = `  
     <main class="cart__content--body">
       <div class="cart__content--body__empty">
-        <h3>${CONSTANS.CART.EMPTY_HEADING}</h3>
-        <p>${CONSTANS.CART.EMPTY_CONTENT}</p>
+        <h3>${CONSTANTS.CART.EMPTY_HEADING}</h3>
+        <p>${CONSTANTS.CART.EMPTY_CONTENT}</p>
       </div>
     </main>    
     <div class="cart__content--footer__empty">
-      <a href="/product" class="btn btn-lg">${CONSTANS.CART.EMPTY_FOOTER_BTN}</a>
+      <a href="/product" class="btn btn-lg">${CONSTANTS.CART.EMPTY_FOOTER_BTN}</a>
     </div>
   `;
 
 const renderPrice = price => {
   const markup = ` 
   <a class="btn btn-lg">
-    ${CONSTANS.CART.FOOTER_BTN}   
-    <span>${CONSTANS.RS}${price}&nbsp;&nbsp;&nbsp;></span>     
+    ${CONSTANTS.CART.FOOTER_BTN}   
+    <span>${CONSTANTS.RS}${price}&nbsp;&nbsp;&nbsp;></span>     
   </a>`;
   const footer = document.getElementsByClassName("cart__content--footer")[0];
   footer.insertAdjacentHTML("beforeend", markup);

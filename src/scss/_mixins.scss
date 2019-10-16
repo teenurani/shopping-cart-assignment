@@ -1,0 +1,25 @@
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@mixin responsive-for-IPad {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin responsive-for-mobile-landscape {
+  @media (min-width: 480px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen =  Max 480px
+*/
+@mixin responsive-for-mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

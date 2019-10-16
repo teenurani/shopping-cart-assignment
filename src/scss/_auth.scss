@@ -4,7 +4,7 @@
   width: 85%;
   margin: 3rem 0rem;
   font-size: 0.9rem;
-  .auth__header {    
+  .auth__header {
     h1 {
       margin: 1rem auto;
     }
@@ -12,5 +12,11 @@
   .auth__main {
     margin-left: 5rem;
     width: 20rem;
+  }
+}
+
+@include responsive-for-IPad {
+  .auth {
+    width: 100%;
   }
 }

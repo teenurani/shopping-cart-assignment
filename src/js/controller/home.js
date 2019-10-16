@@ -1,8 +1,7 @@
 import { getCategories } from "../model/Category";
 import { getBanners } from "../model/Banners";
 import * as homeView from "../view/homeView";
-import { CONSTANS } from "../constants";
-import { elements } from "../base";
+import { CONSTANTS } from "../constants";
 
 const state = {};
 
@@ -11,7 +10,7 @@ const controlBanners = async () => {
   try {
     state.bannersList = await getBanners();
   } catch (err) {
-    console.log(CONSTANS.ERROR_MSG.BANNERS, err);
+    console.log(CONSTANTS.ERROR_MSG.BANNERS, err);
   }
   // render result on UI
   homeView.renderBanners(state.bannersList);
@@ -22,7 +21,7 @@ const controlCategories = async () => {
   try {
     state.categoryList = await getCategories();
   } catch (err) {
-    console.log(CONSTANS.ERROR_MSG.CATEGORIES, err);
+    console.log(CONSTANTS.ERROR_MSG.CATEGORIES, err);
   }
   // render result on UI
   homeView.renderCategories(state.categoryList);
@@ -35,7 +34,7 @@ const controlDots = () => {
   homeView.renderDots(state.dotArray);
 };
 
-if (CONSTANS.currentURL == CONSTANS.PAGE_URL.HOME) {
+if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.HOME) {
   controlBanners();
   controlCategories();
 

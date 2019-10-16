@@ -161,3 +161,26 @@
     opacity: 1;
   }
 }
+
+@include responsive-for-IPad {
+  .cart__content {
+    right: 0;
+  }
+}
+
+@include responsive-for-mobile {
+  .cart__content {
+    right: 0;
+  }
+
+  .cart__content {
+    width: 100%;
+  }
+  .cart__content--footer,
+  .cart__content--footer__empty {
+    width: 100%;
+    a {
+      width: 92%;
+    }
+  }
+}

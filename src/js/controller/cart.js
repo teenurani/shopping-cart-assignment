@@ -1,6 +1,6 @@
 import { getCarts, addToCarts, removeFromCarts } from "../model/Cart";
 import * as cartView from "../view/cartView";
-import { CONSTANS } from "../constants";
+import { CONSTANTS } from "../constants";
 import { CART_SELECTOR } from "../base";
 
 const state = {};
@@ -10,7 +10,7 @@ export const controlCart = async () => {
   try {
     state.cartList = await getCarts();
   } catch (err) {
-    console.log(CONSTANS.ERROR_MSG.BANNERS, err);
+    console.log(CONSTANTS.ERROR_MSG.BANNERS, err);
   }
   // render result on UI
   cartView.renderCart(state.cartList);
@@ -25,7 +25,7 @@ const addToCart = async productId => {
     //render cart UI
     cartView.renderCart(cart.data);
   } catch (err) {
-    console.log(CONSTANS.ERROR_MSG.ADDTOCART, err);
+    console.log(CONSTANTS.ERROR_MSG.ADD_TO_CART, err);
   }
 };
 
@@ -38,7 +38,7 @@ const removeFromCart = async productId => {
     //render cart UI
     cartView.renderCart(cart.data);
   } catch (err) {
-    console.log(CONSTANS.ERROR_MSG.REMOVEFROMCART, err);
+    console.log(CONSTANTS.ERROR_MSG.REMOVE_FROM_CART, err);
   }
 };
 

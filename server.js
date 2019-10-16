@@ -48,6 +48,14 @@ const staticMiddleware = express.static("dist");
 app.use(staticMiddleware);
 // webpack setup end
 
+app.use(function(req, res, next) {
+  if (req.originalUrl === "/favicon.ico") {
+    res.status(204).json({ nope: true });
+  } else {
+    next();
+  }
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error("Not Found");

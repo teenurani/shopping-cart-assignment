@@ -1,11 +1,10 @@
 @import "./var";
-@import "./common.scss";
+@import "./global";
+@import "./mixins";
 @import "./header";
 @import "./footer";
 @import "./carousel";
-@import "./_home";
+@import "./home";
 @import "./product";
 @import "./auth";
 @import "./cart";
-@import "./media";
-

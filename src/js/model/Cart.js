@@ -1,13 +1,13 @@
 import { getResults, postData } from "../api";
-import { CONSTANS } from "../constants";
+import { CONSTANTS } from "../constants";
 import { END_POINTS } from "../service";
 
 export const getCartItems = async () => {
   try {
-    const results = await getResults(END_POINTS.CARTITEMS);
+    const results = await getResults(END_POINTS.CART_ITEMS);
     return results;
   } catch (err) {
-    console.log(CONSTANS.errorMsg.CARTITEMS, err);
+    console.log(CONSTANTS.errorMsg.CART_ITEMS, err);
   }
 };
 
@@ -16,13 +16,13 @@ export const getCarts = async () => {
     const results = await getResults(END_POINTS.CARTS);
     return results;
   } catch (err) {
-    console.log(CONSTANS.errorMsg.CARTS, err);
+    console.log(CONSTANTS.errorMsg.CARTS, err);
   }
 };
 
 export const addToCarts = async productId => {
   let data = {
-    url: END_POINTS.ADDTOCART,
+    url: END_POINTS.ADD_TO_CART,
     body: {
       productId: productId
     }
@@ -31,13 +31,13 @@ export const addToCarts = async productId => {
     const results = await postData(data);
     return results;
   } catch (err) {
-    console.log(CONSTANS.errorMsg.ADDTOCART, err);
+    console.log(CONSTANTS.errorMsg.ADD_TO_CART, err);
   }
 };
 
 export const removeFromCarts = async productId => {
   let data = {
-    url: END_POINTS.REMOVEFROMCART,
+    url: END_POINTS.REMOVE_FROM_CART,
     body: {
       productId: productId
     }
@@ -46,6 +46,6 @@ export const removeFromCarts = async productId => {
     const results = await postData(data);
     return results;
   } catch (err) {
-    console.log(CONSTANS.errorMsg.REMOVEFROMCART, err);
+    console.log(CONSTANTS.errorMsg.REMOVE_FROM_CART, err);
   }
 };

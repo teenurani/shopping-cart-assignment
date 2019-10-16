@@ -1,5 +1,5 @@
 import { getResults } from "../api";
-import { CONSTANS } from "../constants";
+import { CONSTANTS } from "../constants";
 import { END_POINTS } from "../service";
 
 export const getCategories = async () => {
@@ -9,6 +9,6 @@ export const getCategories = async () => {
       .filter((item, index) => item.enabled == true)
       .sort((a, b) => (a.order < b.order ? 0 : 1));
   } catch (err) {
-    console.log(CONSTANS.errorMsg.categoryList, err);
+    console.log(CONSTANTS.errorMsg.categoryList, err);
   }
 };
