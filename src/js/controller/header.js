@@ -1,4 +1,4 @@
-import { CART_SELECTOR } from "../base";
+import { CART_SELECTOR, GLOBAL } from "../base";
 import { controlCart } from "./cart";
 import { getCartItems } from "../model/Cart";
 import { CONSTANTS } from "../constants";
@@ -12,6 +12,7 @@ const cartBtn = CART_SELECTOR.cart;
 
 // When the user clicks the button, open the cartModal
 cartBtn.onclick = function() {
+  GLOBAL.bodySelector.classList.add("no-scroll");
   cartModal.style.display = "block";
   cartView.renderStaticContent();
   controlCart();

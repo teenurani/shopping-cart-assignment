@@ -13,7 +13,9 @@ body {
     text-decoration: none;
   }
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 .form__group {
   color: $background-color-dark;
   margin-bottom: 2rem;

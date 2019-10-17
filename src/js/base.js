@@ -30,3 +30,6 @@ export const CART_SELECTOR = {
   cartMinus: "btn cart-minus",
   cartItem: document.querySelector("#cart span")
 };
+export const GLOBAL = {
+  bodySelector: document.querySelector("body")
+};
