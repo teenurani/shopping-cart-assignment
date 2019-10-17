@@ -27,7 +27,9 @@ const categoriesView = category => {
 };
 
 const dotViews = dot => {
-  const markup = `<span class="dot" onclick="window.carousel.currentSlide(${dot})"></span>`;
+  const markup = `
+  <span class="dot" onclick="window.carousel.currentSlide(${dot})" onkeyup="window.carousel.currentSlide(${dot})" 
+    tabindex="0"></span>`;
   CAROUSEL_SELECTOR.bannersDotsList.insertAdjacentHTML("beforeend", markup);
 };
 
