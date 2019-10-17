@@ -1,8 +1,8 @@
-import { CART_SELECTOR, GLOBAL } from "../base";
-import { controlCart } from "./cart";
-import { getCartItems } from "../model/Cart";
-import { CONSTANTS } from "../constants";
-import * as cartView from "../view/cartView";
+import { CART_SELECTOR, GLOBAL } from "../../base";
+import { controlCart } from "../cart/cart";
+import { getCartItems } from "../../model/Cart";
+import { CONSTANTS } from "../../constants";
+import * as cartView from "../../view/cartView";
 
 // Get the cartModal
 const cartModal = CART_SELECTOR.cartModal;

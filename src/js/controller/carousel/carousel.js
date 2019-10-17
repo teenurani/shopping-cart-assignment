@@ -1,4 +1,4 @@
-import { CAROUSEL_SELECTOR } from "../base";
+import { CAROUSEL_SELECTOR } from "../../base";
 
 window.carousel = (() => {
   var slideIndex = 1;

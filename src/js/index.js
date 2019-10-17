@@ -1,7 +1,7 @@
-import "./controller/home";
-import "./controller/login";
-import "./controller/registration";
-import "./controller/product";
-import "./controller/carousel";
-import "./controller/cart";
-import "./controller/header";
+import "./controller/home/home";
+import "./controller/login/login";
+import "./controller/registration/registration";
+import "./controller/product/product";
+import "./controller/carousel/carousel";
+import "./controller/cart/cart";
+import "./controller/header/header";

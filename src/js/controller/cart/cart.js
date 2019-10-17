@@ -1,7 +1,7 @@
-import { getCarts, addToCarts, removeFromCarts } from "../model/Cart";
-import * as cartView from "../view/cartView";
-import { CONSTANTS } from "../constants";
-import { CART_SELECTOR, GLOBAL } from "../base";
+import { getCarts, addToCarts, removeFromCarts } from "../../model/Cart";
+import * as cartView from "../../view/cartView";
+import { CONSTANTS } from "../../constants";
+import { CART_SELECTOR, GLOBAL } from "../../base";
 
 const state = {};
 
