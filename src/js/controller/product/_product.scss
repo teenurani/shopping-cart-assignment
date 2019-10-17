@@ -8,17 +8,19 @@
     background-color: $background-color;
     &__list {
       &--item {
-        padding: 1rem;
         border-bottom: solid 0.13rem #d2d2d2;
-        color: #999;
-        font-weight: bold;
-        background-color: #eee;
-        background-image: linear-gradient(#eee, #9999990a);
-        margin-left: 1rem;
-        cursor: pointer;
-      }
-      &--item:hover {
-        background-color: $background-color-dark;
+        button {
+          font-size: $font-size-md;
+          width: 100%;
+          font-weight: bold;
+          cursor: pointer;
+          color: $color-theme-1;          
+          padding: 1rem;
+          border: none;
+          background: none;
+          background-color: $background-color;
+          text-align: left;
+        }
       }
       .highlight {
         background-color: $color-theme;

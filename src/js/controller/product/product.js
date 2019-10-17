@@ -41,7 +41,7 @@ const addToCart = async productId => {
     // render result on UI
     CART_SELECTOR.cartItem.textContent = cart.cart + " items";
   } catch (err) {
-    console.log(CONSTANTS.ERROR_MSG.ADDTOCART, err);
+    console.log(CONSTANTS.ERROR_MSG.ADD_TO_CART, err);
   }
 };
 
@@ -50,31 +50,31 @@ if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.PRODUCT) {
   controlProduct();
 
   document.addEventListener("click", function(el) {
-    if (
-      el.target &&
-      el.target.className == PRODUCT_SELECTOR.productCategoryItem
-    ) {
-      //handel event on selection of category and render UI
-      el.target.parentElement
-        .querySelectorAll(PRODUCT_SELECTOR.productCategoryItemClass)
-        .forEach(function(el) {
-          el.classList.remove(PRODUCT_SELECTOR.highlightClass);
-        });
-      el.target.classList.add(PRODUCT_SELECTOR.highlightClass);
-      controlProduct(el.target.id);
-    } else if (el.target.classList.contains(CART_SELECTOR.buyNow)) {
-      // handel event on buy-now button
-      addToCart(el.target.name);
-    } else if (
-      el.target &&
-      el.target.className ==
-        PRODUCT_SELECTOR.productCategoryItem +
-          " " +
-          PRODUCT_SELECTOR.highlightClass
-    ) {
-      //handel event on unselect of category and render UI
-      el.target.classList.remove(PRODUCT_SELECTOR.highlightClass);
-      controlProduct();
+    const _self = el.target;
+    if (_self) {
+      if (
+        _self.parentElement.classList.contains(
+          PRODUCT_SELECTOR.productCategoryItem
+        )
+      ) {
+        if (_self.classList.contains(PRODUCT_SELECTOR.highlightClass)) {          
+          //handel event on unselect of category and render UI
+          _self.classList.remove(PRODUCT_SELECTOR.highlightClass);
+          controlProduct();
+        } else {
+          //handel event on selection of category and render UI
+          _self.parentElement.parentElement
+            .querySelectorAll(PRODUCT_SELECTOR.productCategorySelector)
+            .forEach(function(el) {
+              el.classList.remove(PRODUCT_SELECTOR.highlightClass);
+            });
+          _self.classList.add(PRODUCT_SELECTOR.highlightClass);
+          controlProduct(_self.id);
+        }
+      } else if (_self.classList.contains(CART_SELECTOR.buyNow)) {
+        // handel event on buy-now button
+        addToCart(_self.name);
+      }
     }
   });
 
