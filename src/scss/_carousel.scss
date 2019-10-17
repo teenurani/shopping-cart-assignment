@@ -1,8 +1,7 @@
 /* carousel container */
 .carousel-container {
-  max-width: 62.5rem;
   position: relative;
-  margin: auto;
+  @include screen-width;
 
   .carousel__item {
     display: none;

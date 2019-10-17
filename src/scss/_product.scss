@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: min-content;
   grid-template-columns: 20% 80%;
-  margin: auto 10rem;
+  @include screen-width;
 
   &__sidebar {
     background-color: $background-color;
@@ -81,10 +81,9 @@
   }
 }
 
-@include responsive-for-IPad {
+@include responsive-for-IPad;
+@include responsive-for-mobile-landscape {
   .product {
-    width: 100%;
-    margin: 0rem;
     grid-template-columns: 25% 75%;
     &__info__list {
       grid-template-columns: repeat(2, 50%);
@@ -108,8 +107,6 @@
 
 @include responsive-for-mobile {
   .product {
-    width: 100%;
-    margin: 0rem;
     grid-template-columns: 100%;
     &__sidebar {
       display: none;

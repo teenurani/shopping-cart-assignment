@@ -1,7 +1,7 @@
 import { getCarts, addToCarts, removeFromCarts } from "../model/Cart";
 import * as cartView from "../view/cartView";
 import { CONSTANTS } from "../constants";
-import { CART_SELECTOR } from "../base";
+import { CART_SELECTOR, GLOBAL } from "../base";
 
 const state = {};
 
@@ -50,8 +50,10 @@ document.addEventListener("click", function(el) {
     removeFromCart(el.target.id);
   } else if (
     el.target &&
-    (el.target.className == CART_SELECTOR.cartClose || event.target == cartModal)
+    (el.target.className == CART_SELECTOR.cartClose ||
+      event.target == cartModal)
   ) {
+    GLOBAL.bodySelector.classList.remove("no-scroll");
     cartModal.style.display = "none";
   }
 });

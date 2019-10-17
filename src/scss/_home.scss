@@ -1,7 +1,8 @@
 .main {
   &__category {
     .category__items {
-      margin: auto 10rem;
+      @include screen-width;
+
       .category__item {
         display: grid;
         grid-template-columns: repeat(3, 33%);
@@ -46,20 +47,11 @@
   }
 }
 
-@include responsive-for-IPad {
-  .main__category .category__items {
-    margin: 0rem;
-  }
-}
-
 @include responsive-for-mobile {
   .main__category {
     font-size: $font-size-sm;
-    .category__items {
-      margin: 0rem;
-      .category__item--info p {
-        margin: 0rem 0rem 1rem 0rem;
-      }
+    .category__items .category__item--info p {
+      margin: 0rem 0rem 1rem 0rem;
     }
   }
 }

@@ -1,7 +1,7 @@
 .auth {
   display: flex;
   justify-content: center;
-  width: 85%;
+  @include screen-width;
   margin: 3rem 0rem;
   font-size: 0.9rem;
   .auth__header {

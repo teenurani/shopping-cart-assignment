@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 25% 60% 15%;
     height: 100%;
-    margin: auto 10rem;
+    @include screen-width;
     padding-top: 0.3rem;
     a {
       color: $font-color-1;
@@ -53,10 +53,10 @@
   }
 }
 
-@include responsive-for-IPad {
+@include responsive-for-IPad;
+@include responsive-for-mobile-landscape {
   .main__header {
-    .nav {
-      margin: 0rem;
+    .nav {    
       a img {
         width: 85%;
       }
@@ -66,10 +66,10 @@
     }
   }
 }
+
 @include responsive-for-mobile {
   .main__header {
-    .nav {
-      margin: 0rem;
+    .nav {    
       grid-template-columns: 25% 35% 40%;
       a img {
         width: 100%;
