@@ -47,47 +47,19 @@
 }
 
 @include responsive-for-IPad {
-  .main__category .category__items,
-  .main__header .nav {
+  .main__category .category__items {
     margin: 0rem;
-  }
-  .main__header .nav a img {
-    width: 85%;
-  }
-  .main__header .nav__auth .cart {
-    padding: 0.8rem;
   }
 }
 
 @include responsive-for-mobile {
-  .main__category .category__items,
-  .main__header .nav {
-    margin: 0rem;
-  }
-
-  .main__header .nav {
-    grid-template-columns: 25% 35% 40%;
-    a img {
-      width: 100%;
-      margin-left: 0.5rem;
-    }
-    .nav__list {
-      visibility: hidden;
-    }
-    .nav__auth {
-      margin-top: -0.3rem;
-      .nav__auth__items {
-        display: none;
-      }
-      .cart span {
-        justify-content: left;
-      }
-    }
-  }
   .main__category {
-    font-size: 0.8rem;
-    .category__items .category__item--info p {
-      margin: 0rem 0rem 1rem 0rem;
+    font-size: $font-size-sm;
+    .category__items {
+      margin: 0rem;
+      .category__item--info p {
+        margin: 0rem 0rem 1rem 0rem;
+      }
     }
   }
 }

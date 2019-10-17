@@ -1,7 +1,7 @@
 {
   "name": "sabkabazaar",
   "version": "1.0.0",
-  "description": "An Ecommerce website",
+  "description": "An ecommerce website",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
@@ -18,8 +18,7 @@
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0",
     "webpack-dev-middleware": "^3.7.1",
-    "webpack-hot-middleware": "^2.25.0",
-    "handlebars": "^4.0.10"
+    "webpack-hot-middleware": "^2.25.0"  
   },
   "dependencies": {
     "autoprefixer": "^9.6.1",
@@ -31,9 +30,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "extract-loader": "^3.1.0",
-    "file-loader": "^4.2.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
+    "file-loader": "^4.2.0",    
     "morgan": "^1.9.1",
     "node-sass": "^4.12.0",
     "postcss": "^7.0.18",

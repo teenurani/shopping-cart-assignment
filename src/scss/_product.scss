@@ -96,10 +96,10 @@
         }
         .price__info {
           display: none;
-        }
-        .price__info--IPad {
-          display: flex;
-          clear: both;
+          &--IPad {
+            display: flex;
+            clear: both;
+          }
         }
       }
     }
@@ -133,9 +133,9 @@
         }
         .price__info {
           display: none;
-        }
-        .price__info--IPad {
-          display: flex;
+          &--IPad {
+            display: flex;
+          }
         }
       }
     }

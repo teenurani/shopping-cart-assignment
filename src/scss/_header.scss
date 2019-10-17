@@ -52,3 +52,41 @@
     }
   }
 }
+
+@include responsive-for-IPad {
+  .main__header {
+    .nav {
+      margin: 0rem;
+      a img {
+        width: 85%;
+      }
+      &__auth .cart {
+        padding: 0.8rem;
+      }
+    }
+  }
+}
+@include responsive-for-mobile {
+  .main__header {
+    .nav {
+      margin: 0rem;
+      grid-template-columns: 25% 35% 40%;
+      a img {
+        width: 100%;
+        margin-left: 0.5rem;
+      }
+      &__list {
+        visibility: hidden;
+      }
+      &__auth {
+        margin-top: -0.3rem;
+        &__items {
+          display: none;
+        }
+        .cart span {
+          justify-content: left;
+        }
+      }
+    }
+  }
+}
