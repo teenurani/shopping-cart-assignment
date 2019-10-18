@@ -1,7 +1,7 @@
 /* carousel container */
 .carousel-container {
   position: relative;
-  @include screen-width;
+  @include screen-width-sm;
 
   .carousel__item {
     display: none;
@@ -10,6 +10,7 @@
   /* Next & previous buttons */
   .prev,
   .next {
+    display: none;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -39,7 +40,7 @@
 
   .dot-container {
     text-align: center;
-    margin-top: -1.8rem;
+    margin-top: 0rem;
   }
 
   /* The dots/bullets/indicators */
@@ -58,26 +59,39 @@
   .dot:hover {
     background-color: #717171;
   }
+
+  .border-block {
+    margin-top: -1.9rem;
+  }
 }
 
 @include responsive-for-IPad {
   .carousel-container {
-    @include screen-width-sm;
-  }
-}
-
-@include responsive-for-mobile {
-  .carousel-container {
-    @include screen-width-sm;
     .dot-container {
       margin-top: 0rem;
     }
     .border-block {
-      margin-top: -1.9rem;
+      margin-top: 0rem;
     }
     .prev,
     .next {
-      display: none;
+      display: block;
+    }
+  }
+}
+
+@include responsive-for-desktop {
+  .carousel-container {
+    @include screen-width;
+    .dot-container {
+      margin-top: 0rem;
+    }
+    .border-block {
+      margin-top: 0rem;
+    }
+    .prev,
+    .next {
+      display: block;
     }
   }
 }
