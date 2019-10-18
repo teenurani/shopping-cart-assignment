@@ -16,6 +16,10 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+button:focus,
+span:focus {
+  outline: 0;
+}
 .form__group {
   color: $background-color-dark;
   margin-bottom: 2rem;

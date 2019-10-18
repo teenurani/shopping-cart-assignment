@@ -60,8 +60,15 @@
   }
 }
 
+@include responsive-for-IPad {
+  .carousel-container {
+    @include screen-width-sm;
+  }
+}
+
 @include responsive-for-mobile {
   .carousel-container {
+    @include screen-width-sm;
     .dot-container {
       margin-top: 0rem;
     }

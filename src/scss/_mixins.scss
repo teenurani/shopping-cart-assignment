@@ -24,7 +24,18 @@
   }
 }
 
+@mixin responsive-for-desktop {
+  @media all and (min-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin screen-width {
-  max-width: 70rem;
+  max-width: 80%;
+  margin: auto;
+}
+
+@mixin screen-width-sm {
+  max-width: 100%;
   margin: auto;
 }

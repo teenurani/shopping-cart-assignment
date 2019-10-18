@@ -1,7 +1,8 @@
 .main {
   &__category {
+    font-size: $font-size-sm;
     .category__items {
-      @include screen-width;
+      @include screen-width-sm;
 
       .category__item {
         display: grid;
@@ -18,7 +19,7 @@
           text-align: center;
           padding: 1rem;
           p {
-            margin: 1.5rem 0rem 2rem 0rem;
+            margin: 0rem 0rem 1rem 0rem;
           }
         }
         .border-block {
@@ -47,11 +48,14 @@
   }
 }
 
-@include responsive-for-mobile {
+@include responsive-for-desktop {
   .main__category {
-    font-size: $font-size-sm;
-    .category__items .category__item--info p {
-      margin: 0rem 0rem 1rem 0rem;
+    font-size: $font-size-md;
+    .category__items {
+      @include screen-width;
+      &--info p {
+        margin: 1.5rem 0rem 2rem 0rem;
+      }
     }
   }
 }

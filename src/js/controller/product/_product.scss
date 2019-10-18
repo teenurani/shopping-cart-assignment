@@ -14,11 +14,11 @@
           width: 100%;
           font-weight: bold;
           cursor: pointer;
-          color: $color-theme-1;          
+          color: $font-color-1;
           padding: 1rem;
           border: none;
           background: none;
-          background-color: $background-color;
+          background-color: $background-color-4;
           text-align: left;
         }
       }
@@ -86,6 +86,7 @@
 @include responsive-for-IPad;
 @include responsive-for-mobile-landscape {
   .product {
+    @include screen-width-sm;
     grid-template-columns: 25% 75%;
     &__info__list {
       grid-template-columns: repeat(2, 50%);
@@ -109,6 +110,7 @@
 
 @include responsive-for-mobile {
   .product {
+    @include screen-width-sm;
     grid-template-columns: 100%;
     &__sidebar {
       display: none;

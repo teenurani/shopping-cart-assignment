@@ -59,6 +59,7 @@
 @include responsive-for-mobile-landscape {
   .main__header {
     .nav {
+      @include screen-width-sm;
       a img {
         width: 85%;
       }
@@ -72,6 +73,7 @@
 @include responsive-for-mobile {
   .main__header {
     .nav {
+      @include screen-width-sm;
       grid-template-columns: 25% 35% 40%;
       a img {
         width: 100%;
