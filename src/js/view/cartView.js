@@ -55,13 +55,13 @@ const emptyCartMarkup = `
       </div>
     </main>    
     <div class="cart__content--footer__empty">
-      <a href="/product" class="btn btn-lg">${CONSTANTS.CART.EMPTY_FOOTER_BTN}</a>
+      <a href="/" class="btn btn-lg">${CONSTANTS.CART.EMPTY_FOOTER_BTN}</a>
     </div>
   `;
 
 const renderPrice = price => {
   const markup = ` 
-  <a class="btn btn-lg">
+  <a href="/" class="btn btn-lg">
     ${CONSTANTS.CART.FOOTER_BTN}   
     <span>${CONSTANTS.RS}${price}&nbsp;&nbsp;&nbsp;></span>     
   </a>`;

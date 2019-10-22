@@ -17,6 +17,6 @@
 
 @include responsive-for-IPad {
   .auth {
-    width: 100%;
+    max-width: 100%;
   }
 }

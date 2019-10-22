@@ -129,13 +129,17 @@
           height: 2.8rem;
         }
         p {
-          height: 7.4rem;
+          height: 8.6rem;
           font-size: 0.8rem;
         }
         .price__info {
           display: none;
           &--IPad {
             display: flex;
+          }
+          .price__info--IPad {
+            display: none;
+            margin: 1rem 0rem 0rem 0rem;
           }
         }
       }

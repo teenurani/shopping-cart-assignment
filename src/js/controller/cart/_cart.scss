@@ -16,7 +16,7 @@
     position: fixed;
     bottom: 0;
     width: 20rem;
-    right: 10rem;
+    right: 10%;
     height: 87.5%;
     background-color: $background-color;
     animation-name: slideIn;
@@ -114,13 +114,12 @@
       bottom: 0;
       position: fixed;
       background-color: $background-color-3;
-
+      padding: 1rem;
+      width: 20rem;
       a {
-        padding: 1rem;
-        margin: 1rem;
-        text-align: center;
-        width: 18rem;
         display: flex;
+        justify-content: center;
+        padding: 1rem;
       }
       a,
       p {
@@ -135,9 +134,6 @@
       a {
         justify-content: space-between;
       }
-    }
-    &--footer__empty a {
-      padding: 1rem 6rem;
     }
   }
 }
@@ -171,16 +167,10 @@
 @include responsive-for-mobile {
   .cart__content {
     right: 0;
-  }
-
-  .cart__content {
     width: 100%;
-  }
-  .cart__content--footer,
-  .cart__content--footer__empty {
-    width: 100%;
-    a {
-      width: 92%;
+    &--footer,
+    &--footer__empty {
+      width: 100%;
     }
   }
 }
