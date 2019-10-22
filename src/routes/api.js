@@ -18,6 +18,14 @@ router.get("/getCategories", function(req, res) {
   res.json(categories);
 });
 
+router.get("/getCartList", function(req, res) {
+  const cartData = cartList();
+  res.json(cartData);
+});
+
+router.get("/cartItems", function(req, res) {
+  res.json(cart.length);
+});
 router.post("/addToCart", function(req, res) {
   cart.push(req.body.productId);
   addToCart.cart = cart.length;
@@ -33,15 +41,6 @@ router.post("/removeFromCart", function(req, res) {
   const cartData = cartList();
   addToCart.data = cartData;
   res.json(addToCart);
-});
-
-router.get("/getCartList", function(req, res) {
-  const cartData = cartList();
-  res.json(cartData);
-});
-
-router.get("/cartItems", function(req, res) {
-  res.json(cart.length);
 });
 
 const cartList = () => {

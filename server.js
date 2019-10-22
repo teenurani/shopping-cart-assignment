@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-const bodyParser = require("body-parser");
 const hbs = require("express-handlebars");
 const templateRoutes = require("./src/routes/template");
 const apiRoutes = require("./src/routes/api");
@@ -19,9 +18,6 @@ app.engine(
 );
 app.set("views", path.join(__dirname, "/src/views"));
 app.set("view engine", "hbs");
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "")));
 
@@ -44,10 +40,7 @@ const webpackHotMiddleware = require("webpack-hot-middleware")(compiler);
 app.use(webpackDevMiddleware);
 app.use(webpackHotMiddleware);
 
-const staticMiddleware = express.static("dist");
-app.use(staticMiddleware);
-// webpack setup end
-
+//handel favicon request
 app.use(function(req, res, next) {
   if (req.originalUrl === "/favicon.ico") {
     res.status(204).json({ nope: true });

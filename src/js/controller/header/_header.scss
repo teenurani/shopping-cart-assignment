@@ -5,15 +5,20 @@
 
   .nav {
     display: grid;
-    grid-template-columns: 25% 60% 15%;
+    grid-template-columns: 25% 35% 40%;
     height: 100%;
-    @include screen-width;
-    padding-top: 0.3rem;
+    @include screen-width-sm;
     a {
       color: $font-color-1;
       font-weight: bold;
+
+      img {
+        width: 100%;
+        margin: 0.5rem;
+      }
     }
     &__list {
+      visibility: hidden;
       display: flex;
       align-items: flex-end;
       margin-left: 2rem;
@@ -23,19 +28,21 @@
     }
     &__auth {
       &__items {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        margin-bottom: 1rem;
+        display: none;
+        justify-content: flex-end;
         font-size: 0.8rem;
+        &--item {
+          padding: 0.5rem;
+        }
       }
       .cart {
         align-self: end;
         background-color: $background-color;
-        padding: 0.8rem 1.5rem;
-        width: 100%;
+        display: flex;
+        justify-content: center;
         border: none;
-
+        width: 100%;
+        height: 100%;
         img {
           height: 2rem;
           float: left;
@@ -44,7 +51,7 @@
         span {
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: left;
           height: 2rem;
           color: $font-color-2;
           padding-left: 0.5rem;
@@ -55,40 +62,44 @@
   }
 }
 
-@include responsive-for-IPad;
-@include responsive-for-mobile-landscape {
+@include responsive-for-IPad {
   .main__header {
     .nav {
-      @include screen-width-sm;
-      a img {
-        width: 85%;
+      grid-template-columns: 25% 55% 20%;
+      &__list {
+        visibility: visible;
       }
-      &__auth .cart {
-        padding: 0.8rem;
+      &__auth {
+        &__items {
+          display: flex;
+        }
+        .cart {
+          height: 70%;
+        }
       }
     }
   }
 }
 
-@include responsive-for-mobile {
+@include responsive-for-desktop {
   .main__header {
     .nav {
-      @include screen-width-sm;
-      grid-template-columns: 25% 35% 40%;
+      @include screen-width;
+      grid-template-columns: 25% 60% 15%;
       a img {
-        width: 100%;
-        margin-left: 0.5rem;
+        width: auto;
+        margin-left: 0rem;
       }
       &__list {
-        visibility: hidden;
+        visibility: visible;
       }
       &__auth {
-        margin-top: -0.3rem;
+        margin-top: 0rem;
         &__items {
-          display: none;
+          display: flex;
         }
-        .cart span {
-          justify-content: left;
+        .cart {
+          height: 70%;          
         }
       }
     }

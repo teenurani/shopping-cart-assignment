@@ -2,10 +2,8 @@
   "name": "sabkabazaar",
   "version": "1.0.0",
   "description": "An ecommerce website",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack",
-    "dev": "node server.js"
+  "scripts": {   
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
