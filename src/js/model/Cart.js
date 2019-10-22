@@ -21,6 +21,7 @@ export const getCarts = async () => {
 };
 
 export const addToCarts = async productId => {
+  console.log(productId)
   let data = {
     url: END_POINTS.ADD_TO_CART,
     body: {

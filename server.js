@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const bodyParser = require("body-parser");
 const hbs = require("express-handlebars");
 const templateRoutes = require("./src/routes/template");
 const apiRoutes = require("./src/routes/api");
@@ -7,6 +8,8 @@ require("dotenv").config();
 
 const app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 // view engine setup
 app.engine(
   "hbs",
@@ -16,6 +19,7 @@ app.engine(
     layoutsDir: __dirname + "/src/views/layouts/"
   })
 );
+
 app.set("views", path.join(__dirname, "/src/views"));
 app.set("view engine", "hbs");
 

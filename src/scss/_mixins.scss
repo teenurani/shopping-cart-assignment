@@ -8,22 +8,6 @@
   }
 }
 
-@mixin responsive-for-mobile-landscape {
-  @media (min-width: 480px) and (max-width: 768px) {
-    @content;
-  }
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen =  Max 480px
-*/
-@mixin responsive-for-mobile {
-  @media (max-width: 480px) {
-    @content;
-  }
-}
-
 @mixin responsive-for-desktop {
   @media (min-width: 1024px) {
     @content;

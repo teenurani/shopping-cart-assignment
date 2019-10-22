@@ -26,7 +26,7 @@ router.get("/getCartList", function(req, res) {
 router.get("/cartItems", function(req, res) {
   res.json(cart.length);
 });
-router.post("/addToCart", function(req, res) {
+router.post("/addToCart", function(req, res) {  
   cart.push(req.body.productId);
   addToCart.cart = cart.length;
   const cartData = cartList();
