@@ -26,9 +26,9 @@ router.get("/getCartList", function(req, res) {
 router.get("/cartItems", function(req, res) {
   res.json(cart.length);
 });
-router.post("/addToCart", function(req, res) {  
+router.post("/addToCart", function(req, res) {
   cart.push(req.body.productId);
-  addToCart.cart = cart.length;
+  addToCart.itemCount = cart.length;
   const cartData = cartList();
   addToCart.data = cartData;
   res.json(addToCart);
@@ -45,13 +45,11 @@ router.post("/removeFromCart", function(req, res) {
 
 const cartList = () => {
   var cartData = {};
-  cart.forEach(function(i) {
-    cartData[i] = (cartData[i] || 0) + 1;
-  });
+  cart.map(i => (cartData[i] = (cartData[i] || 0) + 1));
 
   const cartListData = { data: [] };
 
-  products.forEach(function(product) {
+  products.map(product => {
     if (cartData[product.id]) {
       let data = {
         imageURL: product.imageURL,

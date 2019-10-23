@@ -1,4 +1,4 @@
-const url = process.env.URL;
+const url = process.env.BASE_DOMAIN;
 
 export const END_POINTS = {
   BANNERS: url + "/api/getBanners",

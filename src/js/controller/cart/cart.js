@@ -19,11 +19,11 @@ export const controlCart = async () => {
 const addToCart = async productId => {
   // add item to cart
   try {
-    const cart = await addToCarts(productId);
+    const cartInfo = await addToCarts(productId);
     // render result on UI
-    CART_SELECTOR.cartItem.textContent = cart.cart + " items";
+    CART_SELECTOR.cartItem.textContent = cartInfo.itemCount + " items";
     //render cart UI
-    cartView.renderCart(cart.data);
+    cartView.renderCart(cartInfo.data);
   } catch (err) {
     console.log(CONSTANTS.ERROR_MSG.ADD_TO_CART, err);
   }
@@ -32,11 +32,11 @@ const addToCart = async productId => {
 const removeFromCart = async productId => {
   // remove item from cart
   try {
-    const cart = await removeFromCarts(productId);
+    const cartInfo = await removeFromCarts(productId);
     // render result on UI
-    CART_SELECTOR.cartItem.textContent = cart.cart + " items";
+    CART_SELECTOR.cartItem.textContent = cartInfo.itemCount + " items";
     //render cart UI
-    cartView.renderCart(cart.data);
+    cartView.renderCart(cartInfo.data);
   } catch (err) {
     console.log(CONSTANTS.ERROR_MSG.REMOVE_FROM_CART, err);
   }

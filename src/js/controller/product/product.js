@@ -37,9 +37,9 @@ const controlCategories = async () => {
 const addToCart = async productId => {
   // Update cart value on click of buy-now button
   try {
-    const cart = await addToCarts(productId);
+    const cartInfo = await addToCarts(productId);
     // render result on UI
-    CART_SELECTOR.cartItem.textContent = cart.cart + " items";
+    CART_SELECTOR.cartItem.textContent = cartInfo.itemCount + " items";
   } catch (err) {
     console.log(CONSTANTS.ERROR_MSG.ADD_TO_CART, err);
   }

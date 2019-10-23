@@ -3,13 +3,13 @@
   ##Screen = B/w 768px to 1024px
 */
 @mixin responsive-for-IPad {
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: $IPad-min-width) and (max-width: $IPad-max-width) {
     @content;
   }
 }
 
 @mixin responsive-for-desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-min-width) {
     @content;
   }
 }

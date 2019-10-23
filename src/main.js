@@ -1,3 +1,3 @@
 require("webpack-hot-middleware/client");
-require("./main.scss");
+import "./main.scss";
 require("./js/index");

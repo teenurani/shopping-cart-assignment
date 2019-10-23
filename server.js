@@ -46,7 +46,7 @@ app.use(webpackHotMiddleware);
 
 //handel favicon request
 app.use(function(req, res, next) {
-  if (req.originalUrl === "/favicon.ico") {
+  if (req.originalUrl == "/favicon.ico") {
     res.status(204).json({ nope: true });
   } else {
     next();
