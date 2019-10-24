@@ -1,13 +1,22 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
+        "debug": true,
+        "modules": false,
         "targets": {
-          "browsers": ["last 2 Chrome versions"]
+          "browsers": ["> 1%", "not ie <= 10"]
         }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
       }
     ]
   ]
 }
-
