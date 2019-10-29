@@ -1,4 +1,4 @@
-.main__category {
+.home__category {
   font-size: $font-size-sm;
 }
 .category__items {
@@ -42,12 +42,12 @@
   }
 }
 
-.main .border-block img {
+.home .border-block img {
   max-width: 100%;
 }
 
 @include responsive-for-desktop {
-  .main__category {
+  .home__category {
     font-size: $font-size-md;
     .category__items {
       @include screen-width;
