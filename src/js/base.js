@@ -13,7 +13,7 @@ export const HOME_SELECTOR = {
   homeCategoryList: document.querySelector(".category__items")
 };
 export const CAROUSEL_SELECTOR = {
-  bannersDotsList: document.querySelector(".dot-container"),
+  bannersDotsList: document.querySelector(".dot__container"),
   carouselItem: document.getElementsByClassName("carousel__item"),
   bannersDot: document.getElementsByClassName("dot")
 };

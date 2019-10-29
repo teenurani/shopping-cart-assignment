@@ -1,5 +1,5 @@
 /* carousel container */
-.carousel-container {
+.carousel__container {
   position: relative;
   @include screen-width-sm;
 
@@ -38,7 +38,7 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  .dot-container {
+  .dot__container {
     text-align: center;
     margin-top: 0rem;
   }
@@ -66,8 +66,8 @@
 }
 
 @include responsive-for-IPad {
-  .carousel-container {
-    .dot-container {
+  .carousel__container {
+    .dot__container {
       margin-top: 0rem;
     }
     .border-block {
@@ -81,9 +81,9 @@
 }
 
 @include responsive-for-desktop {
-  .carousel-container {
+  .carousel__container {
     @include screen-width;
-    .dot-container {
+    .dot__container {
       margin-top: 0rem;
     }
     .border-block {
