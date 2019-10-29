@@ -22,19 +22,19 @@
             </a>
             <ul class="nav__list">
                 <li class="nav__list--item">
-                    <a href="/">Home</a>
+                    <a href="/">{{header.Home}}</a>
                 </li>
                 <li class="nav__list--item">
-                    <a href="/product">Products</a>
+                    <a href="/product">{{ header.Products}}</a>
                 </li>
             </ul>
             <div class="nav__auth">
                 <ul class="nav__auth__items">
                     <li class="nav__auth__items--item">
-                        <a class="nav__link" href="/login">SignIn</a>
+                        <a class="nav__link" href="/login">{{ header.SignIn}}</a>
                     </li>
                     <li class="nav__auth__items--item">
-                        <a class="nav__link" href="/registration">Register</a>
+                        <a class="nav__link" href="/registration">{{ header.Register}}</a>
                     </li>
                 </ul>
                 <button id="cart" class="cart" aria-label="cart">
@@ -47,7 +47,7 @@
     {{{ body }}}
     <div id="cart__modal" class="cart__modal"></div>
     <footer class="footer" aria-label="footer">
-        Copyright &#169; 2011-2018 Sabka Bazar Grocery Supplies Pvt Ltd
+        {{{footer.content}}}
     </footer>
     <script src="main-bundle.js"></script>
 </body>

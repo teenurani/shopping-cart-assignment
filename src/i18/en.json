@@ -1,0 +1,34 @@
+{
+  "cart": {},
+  "header": {
+    "Home": "Home",
+    "Products": "Products",
+    "SignIn": "SignIn",
+    "Register": "Register"
+  },
+  "footer": {
+    "content": "Copyright &#169; 2011-2018 Sabka Bazar Grocery Supplies Pvt Ltd"
+  },
+  "home": { "Prev": "Prev", "Next": "Next" },
+  "login": {
+    "header": {
+      "heading": "Login",
+      "content": "Get access to your orders. Wishlist and Recommendations"
+    },
+    "main": { "Email": "Email", "Password": "Password", "Submit": "Login" }
+  },
+  "register": {
+    "header": {
+      "heading": "Signup",
+      "content": "We do not share your personal details with anyone."
+    },
+    "main": {
+      "FirstName": "First Name",
+      "LastName": "Last Name",
+      "Email": "Email",
+      "Password": "Password",
+      "ConfirmPassword": "Confirm Password",
+      "Submit": "Signup"
+    }
+  }
+}
