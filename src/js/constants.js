@@ -7,39 +7,17 @@ export const CONSTANTS = {
     ADD_TO_CART: "Error in processing add to cart or buy now ",
     REMOVE_FROM_CART: "Error in processing remove from cart ",
     CARTS: "Error in processing cart list ",
-    CART_ITEMS: "Error in processing cart Items "
+    CART_ITEMS: "Error in processing cart Items ",
+    EMAIL_ERROR_MSG: "Invalid Email Address",
+    EMPTY_ERROR_MSG: "Fields should not be empty!",
+    PASSWORD_MISMATCH: "Mismatch password!",
+    PASSWORD_ERROR_MSG:
+      "Password Field should be number and alphabet and minimum length 7!"
   },
   PAGE_URL: {
     LOGIN: "/login",
     REGISTER: "/registration",
     HOME: "/",
     PRODUCT: "/product"
-  },
-  LOGIN__FORM: "login__form",
-  LOGIN_FORM_INPUT_FIELD: "#login__form .form__group input",
-  REGISTRATION__FORM: "registration__form",
-  REGISTRATION_FORM_INPUT_FIELD: "#registration__form .form__group input",
-  FORM_ERROR_CLASS: "P.form__error",
-  EMAIL_VALIDATION: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
-  PASSWORD_VALIDATION: /((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+[0-9a-z]+$/i,
-  PASSWORD_ERROR_MSG:
-    "Password Field should be number and alphabet and minimum length 7!",
-  EMAIL_ERROR_MSG: "Invalid Email Address",
-  EMPTY_ERROR_MSG: "Fields should not be empty!",
-  PASSWORD_MISMATCH: "Mismatch password!",
-  EMAIL: "email",
-  PASSWORD: "password",
-  SUBMIT: "submit",
-  BUY: "Buy Now",
-  MRP: "MRP",
-  RS: "Rs ",
-  CART: {
-    MAIN_HEADING: "My Cart",
-    EMPTY_HEADING: "No items in your cart",
-    EMPTY_CONTENT: "Your favourite items are just a click away",
-    EMPTY_FOOTER_BTN: "Start Shopping",
-    TAGLINE_TEXT: "You won't find it cheaper anywhere",
-    FOOTER_BTN: "Proceed to Checkout",
-    FOOTER_PROMO: "Promo code can be applied on payment page"
   }
 };

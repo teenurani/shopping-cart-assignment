@@ -19,7 +19,17 @@ export const CAROUSEL_SELECTOR = {
 };
 export const AUTH_SELECTOR = {
   getPassword: document.getElementById("password"),
-  confirmPassword: "confirmPassword"
+  confirmPassword: "confirmPassword",
+  loginForm: "login__form",
+  loginFormInputField: "#login__form .form__group input",
+  RegistrationForm: "registration__form",
+  RegistrationFormInputField: "#registration__form .form__group input",
+  formErrorClass: "P.form__error",
+  emailValidation: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+  passwordValidation: /((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+[0-9a-z]+$/i,
+  email: "email",
+  password: "password",
+  submit: "submit"
 };
 export const CART_SELECTOR = {
   cartList: document.getElementsByClassName("cart__product__list"),

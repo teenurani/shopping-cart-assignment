@@ -1,21 +1,21 @@
 <div class="auth" id="login">
     <div class="auth__header">
-        <h1>{{login.header.heading}}</h1>
-        <p>{{login.header.content}}</p>
+        <h1>{{login.HEADER.HEADING}}</h1>
+        <p>{{login.HEADER.CONTENT}}</p>
     </div>
     <section class="auth__main">
         <form action="/" class="auth__form" id="login__form" novalidate method="POST">
             <div class="form__group">
-                <label for="email" class="form__label" aria-label="Email">{{login.main.Email}}</label>
+                <label for="email" class="form__label" aria-label="Email">{{login.MAIN.EMAIL}}</label>
                 <input type="email" class="form__control" name="email" id="email" required>
                 <p class="form__error"></p>
             </div>
             <div class="form__group">
-                <label for="password" class="form__label" aria-label="Password">{{login.main.Password}}</label>
+                <label for="password" class="form__label" aria-label="Password">{{login.MAIN.PASSWORD}}</label>
                 <input type="password" class="form__control" name="password" id="password" required>
                 <p class="form__error"></p>
             </div>
-            <button type="submit" class="btn btn-lg" aria-label="login">{{login.main.Login}}</button>
+            <button type="submit" class="btn btn-lg" aria-label="login">{{login.MAIN.SUBMIT}}</button>
         </form>
     </section>
 </div>

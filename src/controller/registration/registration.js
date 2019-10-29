@@ -4,9 +4,9 @@ import { AUTH_SELECTOR } from "../../js/base";
 const state = {};
 
 //Create private variable
-const form = document.getElementById(CONSTANTS.REGISTRATION__FORM);
+const form = document.getElementById(AUTH_SELECTOR.RegistrationForm);
 const formInput = document.querySelectorAll(
-  CONSTANTS.REGISTRATION_FORM_INPUT_FIELD
+  AUTH_SELECTOR.RegistrationFormInputField
 );
 
 /**
@@ -27,34 +27,34 @@ state.validateForm = e => {
   let count = 1;
   formInput.forEach(function(item) {
     if (item.value === "" || !item.value) {
-      errorMsg = CONSTANTS.EMPTY_ERROR_MSG;
+      errorMsg = CONSTANTS.ERROR_MSG.EMPTY_ERROR_MSG;
       count = 0;
     } else {
       if (
-        item.type === CONSTANTS.PASSWORD &&
+        item.type === AUTH_SELECTOR.password &&
         (item.value.length < 6 ||
-          !item.value.match(CONSTANTS.PASSWORD_VALIDATION))
+          !item.value.match(AUTH_SELECTOR.passwordValidation))
       ) {
-        errorMsg = CONSTANTS.PASSWORD_ERROR_MSG;
+        errorMsg = CONSTANTS.ERROR_MSG.PASSWORD_ERROR_MSG;
         count = 0;
       }
       if (
         item.id === AUTH_SELECTOR.confirmPassword &&
         item.value.localeCompare(AUTH_SELECTOR.getPassword.value)
       ) {
-        errorMsg = CONSTANTS.PASSWORD_MISMATCH;
+        errorMsg = CONSTANTS.ERROR_MSG.PASSWORD_MISMATCH;
         count = 0;
       }
       if (
-        item.type === CONSTANTS.EMAIL &&
-        !item.value.match(CONSTANTS.EMAIL_VALIDATION)
+        item.type === AUTH_SELECTOR.email &&
+        !item.value.match(AUTH_SELECTOR.emailValidation)
       ) {
-        errorMsg = CONSTANTS.EMAIL_ERROR_MSG;
+        errorMsg = CONSTANTS.ERROR_MSG.EMAIL_ERROR_MSG;
         count = 0;
       }
     }
     let msgElement = item.parentElement.querySelectorAll(
-      CONSTANTS.FORM_ERROR_CLASS
+      AUTH_SELECTOR.formErrorClass
     )[0];
     msgElement.innerText = errorMsg;
     errorMsg = "";
@@ -66,7 +66,7 @@ state.validateForm = e => {
 
 // register listener to input fields
 state.init = () => {
-  state.validate(CONSTANTS.SUBMIT);
+  state.validate(AUTH_SELECTOR.submit);
 };
 
 if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.REGISTER) {

@@ -1,5 +1,5 @@
 import { PRODUCT_SELECTOR } from "../js/base";
-import { CONSTANTS } from "../js/constants";
+const lang = require("../i18/en.json");
 
 const productsView = product => {
   const markup = `
@@ -8,11 +8,11 @@ const productsView = product => {
     <img src=${product.imageURL} alt="name"/>
     <p aria-label="${product.description}"> ${product.description} </p>
     <div class="price__info">
-      <span aria-label="Price: - ${product.price}">${CONSTANTS.MRP} ${CONSTANTS.RS} ${product.price}</span>
-      <button class="btn buy-now" name="${product.id}">${CONSTANTS.BUY}</button>
+      <span aria-label="Price: - ${product.price}">${lang.PRODUCTS.MRP} ${lang.PRODUCTS.RS} ${product.price}</span>
+      <button class="btn buy-now" name="${product.id}">${lang.PRODUCTS.BUY}</button>
     </div>
     <div class="price__info--IPad">    
-      <button class="btn btn-lg buy-now" name="${product.id}" aria-label="Price: - ${product.price}">${CONSTANTS.BUY} @ ${CONSTANTS.RS} ${product.price}</button>
+      <button class="btn btn-lg buy-now" name="${product.id}" aria-label="Price: - ${product.price}">${lang.PRODUCTS.BUY} @ ${lang.PRODUCTS.RS} ${product.price}</button>
     </div>
   </li>`;
 
