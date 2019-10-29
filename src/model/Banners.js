@@ -1,6 +1,6 @@
-import { getResults } from "../api";
-import { CONSTANTS } from "../constants";
-import { END_POINTS } from "../service";
+import { getResults } from "../js/api";
+import { CONSTANTS } from "../js/constants";
+import { END_POINTS } from "../js/service";
 
 export const getBanners = async () => {
   try {

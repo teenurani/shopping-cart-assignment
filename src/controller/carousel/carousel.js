@@ -1,4 +1,4 @@
-import { CAROUSEL_SELECTOR } from "../../base";
+import { CAROUSEL_SELECTOR } from "../../js/base";
 
 window.carousel = (() => {
   var slideIndex = 1;
@@ -6,9 +6,9 @@ window.carousel = (() => {
     showSlides(slideIndex);
   }, 100);
 
-  // setInterval(() => {
-  //   showSlides((slideIndex = slideIndex + 1));
-  // }, 2000);
+  setInterval(() => {
+    showSlides((slideIndex = slideIndex + 1));
+  }, 2000);
 
   return {
     plusSlides: n => {

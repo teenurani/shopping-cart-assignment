@@ -1,5 +1,5 @@
-import { CONSTANTS } from "../constants";
-import { CART_SELECTOR } from "../base";
+import { CONSTANTS } from "../js/constants";
+import { CART_SELECTOR } from "../js/base";
 
 const mainMarkup = `
   <div class="cart__content">

@@ -1,4 +1,4 @@
-import { HOME_SELECTOR, CAROUSEL_SELECTOR } from "../base";
+import { HOME_SELECTOR, CAROUSEL_SELECTOR } from "../js/base";
 
 const bannersView = banner => {
   const markup = `

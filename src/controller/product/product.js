@@ -1,9 +1,9 @@
 import Products from "../../model/Products";
 import * as productsView from "../../view/productsView";
-import { PRODUCT_SELECTOR, CART_SELECTOR } from "../../base";
+import { PRODUCT_SELECTOR, CART_SELECTOR } from "../../js/base";
 import { getCategories } from "../../model/Category";
 import { addToCarts } from "../../model/Cart";
-import { CONSTANTS } from "../../constants";
+import { CONSTANTS } from "../../js/constants";
 
 const state = {};
 

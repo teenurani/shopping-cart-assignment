@@ -1,10 +1,10 @@
 @import "./var";
 @import "./global";
 @import "./mixins";
-@import "../js/controller/header/header";
+@import "../controller/header/header";
 @import "./footer";
-@import "../js/controller/carousel/carousel";
-@import "../js/controller/home/home";
-@import "../js/controller/product/product";
+@import "../controller/carousel/carousel";
+@import "../controller/home/home";
+@import "../controller/product/product";
 @import "./auth";
-@import "../js/controller/cart/cart";
+@import "../controller/cart/cart";

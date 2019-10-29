@@ -1,7 +1,7 @@
-import { CART_SELECTOR, GLOBAL } from "../../base";
+import { CART_SELECTOR, GLOBAL } from "../../js/base";
 import { controlCart } from "../cart/cart";
 import { getCartItems } from "../../model/Cart";
-import { CONSTANTS } from "../../constants";
+import { CONSTANTS } from "../../js/constants";
 import * as cartView from "../../view/cartView";
 
 // Get the cartModal

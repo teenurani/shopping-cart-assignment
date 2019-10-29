@@ -1,5 +1,5 @@
-import { PRODUCT_SELECTOR } from "../base";
-import { CONSTANTS } from "../constants";
+import { PRODUCT_SELECTOR } from "../js/base";
+import { CONSTANTS } from "../js/constants";
 
 const productsView = product => {
   const markup = `

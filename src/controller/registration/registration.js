@@ -1,5 +1,5 @@
-import { CONSTANTS } from "../../constants";
-import { AUTH_SELECTOR } from "../../base";
+import { CONSTANTS } from "../../js/constants";
+import { AUTH_SELECTOR } from "../../js/base";
 
 const state = {};
 

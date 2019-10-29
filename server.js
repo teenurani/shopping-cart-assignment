@@ -16,11 +16,11 @@ app.engine(
   hbs({
     extname: "hbs",
     defaultLayout: "layout",
-    layoutsDir: __dirname + "/src/views/layouts/"
+    layoutsDir: __dirname + "/src/templates/layouts/"
   })
 );
 
-app.set("views", path.join(__dirname, "/src/views"));
+app.set("views", path.join(__dirname, "/src/templates"));
 app.set("view engine", "hbs");
 
 app.use(express.static(path.join(__dirname, "")));

@@ -1,7 +1,7 @@
 import { getCategories } from "../../model/Category";
 import { getBanners } from "../../model/Banners";
 import * as homeView from "../../view/homeView";
-import { CONSTANTS } from "../../constants";
+import { CONSTANTS } from "../../js/constants";
 
 const state = {};
 
