@@ -21,7 +21,7 @@ body {
 //   outline: 0;
 // }
 .form__group {
-  color: $background-color-dark;
+  color: $color-grey-dark;
   margin-bottom: 2rem;
 
   .form__label {
@@ -30,7 +30,7 @@ body {
 
   .form__control {
     border: none;
-    border-bottom: 0.125rem solid $background-color-dark;
+    border-bottom: 0.125rem solid $color-grey-dark;
     background: none;
     width: 100%;
     outline: 0 none;
@@ -51,7 +51,7 @@ body {
   background-color: $color-theme;
   padding: 0.5rem 1rem;
   text-align: center;
-  color: $font-color-3;
+  color: $color-white;
   border-radius: 0.2rem;
   border: none;
   cursor: pointer;

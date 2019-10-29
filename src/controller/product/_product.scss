@@ -6,26 +6,26 @@
 }
 .product__sidebar {
   display: none;
-  background-color: $background-color;
+  background-color: $color-grey-lighter;
   &__list {
     &--item {
-      border-bottom: solid 0.13rem $color-theme-3;
+      border-bottom: solid 0.13rem $color-grey-light;
     }
     &--item button {
       font-size: $font-size-md;
       width: 100%;
       font-weight: bold;
       cursor: pointer;
-      color: $font-color-1;
+      color: $color-grey-dark;
       padding: 1rem;
       border: none;
       background: none;
-      background-color: $background-color-4;
+      background-color: $color-grey-lighter;
       text-align: left;
     }
     .highlight {
       background-color: $color-theme;
-      color: $background-color;
+      color: $color-grey-lighter;
     }
   }
 }
@@ -36,7 +36,7 @@
     width: 100%;
     background-color: $color-theme;
     border: none;
-    color: $background-color-3;
+    color: $color-white;
     padding: 0.5rem;
   }
 }
@@ -51,7 +51,7 @@
   grid-template-columns: 100%;
   grid-gap: 1rem;
   &--item {
-    border-bottom: dashed 0.1rem $color-theme-1;
+    border-bottom: dashed 0.1rem $color-grey-dark;
     h3 {
       font-size: $font-size-sm;
       height: 2.8rem;
@@ -62,7 +62,7 @@
       float: left;
     }
     p {
-      background-color: $background-color;
+      background-color: $color-grey-lighter;
       font-size: $font-size-sm;
       padding: 0.5rem;
       overflow: hidden;

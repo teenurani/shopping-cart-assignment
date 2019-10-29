@@ -1,6 +1,6 @@
 .main__header {
   grid-auto-flow: row;
-  box-shadow: 0px 0px 5px 0px $shadow-color;
+  box-shadow: 0px 0px 5px 0px $color-grey-light;
   margin-bottom: 1rem;
 }
 .nav {
@@ -9,7 +9,7 @@
   height: 100%;
   @include screen-width-sm;
   a {
-    color: $font-color-1;
+    color: $color-grey-dark;
     font-weight: bold;
 
     img {
@@ -38,7 +38,7 @@
     }
     .cart {
       align-self: end;
-      background-color: $background-color;
+      background-color: $color-grey-lighter;
       display: flex;
       justify-content: center;
       border: none;
@@ -54,7 +54,7 @@
         align-items: center;
         justify-content: left;
         height: 2rem;
-        color: $font-color-2;
+        color: $color-grey-darker;
         padding-left: 0.5rem;
         font-weight: bold;
       }
