@@ -14,6 +14,6 @@ Refer - webpack config
 
 ```
 npm install
-npm run dev
+npm start
 Open in browser - http://localhost:3000/
 ```
