@@ -4,8 +4,8 @@ const lang = require("../i18/en.json");
 const mainMarkup = `
   <div class="cart__content">
     <div class="cart__content--header">
-        <h3>${lang.CART.MAIN_HEADING}</h3>
-        <span class="close">&times;</span>     
+        <h1>${lang.CART.MAIN_HEADING}</h2>
+        <button class="close">&times;</button>     
     </div>
     <div id="cart__modal__content">
     </div>
@@ -39,7 +39,8 @@ const cartListView = value => {
           <button class="btn cart-plus" id=${value.id}>&#43;</button>
           <span class="multiplication">&#215;</span>
           <span class="price"> ${lang.CART.RS} ${value.price}</span>
-          <span class="total"> ${lang.CART.RS} ${value.quantity * value.price}</span>
+          <span class="total"> ${lang.CART.RS} ${value.quantity *
+    value.price}</span>
         </div>              
       </div>           
     <li>`;

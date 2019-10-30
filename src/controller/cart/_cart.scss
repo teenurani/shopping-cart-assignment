@@ -28,11 +28,15 @@
     background-color: $color-grey-darkest;
     color: $color-white;
     padding: 0.2rem 1rem;
-    h3 {
+    h1 {
+      font-size: $font-size-md;
       align-self: center;
     }
     .close {
       font-size: $font-size-xlg;
+      border: none;
+      background: none;
+      color: $color-white;
     }
   }
   &--body {

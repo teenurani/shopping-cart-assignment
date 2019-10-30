@@ -57,10 +57,10 @@ if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.PRODUCT) {
           PRODUCT_SELECTOR.productCategoryItem
         )
       ) {
-        if (_self.classList.contains(PRODUCT_SELECTOR.highlightClass)) {          
+        if (_self.classList.contains(PRODUCT_SELECTOR.highlightClass)) {
           //handel event on unselect of category and render UI
           _self.classList.remove(PRODUCT_SELECTOR.highlightClass);
-          controlProduct();
+          controlProduct();          
         } else {
           //handel event on selection of category and render UI
           _self.parentElement.parentElement
@@ -69,7 +69,7 @@ if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.PRODUCT) {
               el.classList.remove(PRODUCT_SELECTOR.highlightClass);
             });
           _self.classList.add(PRODUCT_SELECTOR.highlightClass);
-          controlProduct(_self.id);
+          controlProduct(_self.id);         
         }
       } else if (_self.classList.contains(CART_SELECTOR.buyNow)) {
         // handel event on buy-now button
