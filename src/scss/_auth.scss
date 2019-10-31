@@ -18,14 +18,16 @@
 @include responsive-for-IPad {
   .auth {
     max-width: 100%;
-    .btn {
-      font-size: $font-size-md;
-    }
+  }
+  &,
+  .btn {
+    font-size: $font-size-md;
   }
 }
 
 @include responsive-for-desktop {
-  .auth .btn {
+  .auth,
+  .btn {
     font-size: $font-size-md;
   }
 }
