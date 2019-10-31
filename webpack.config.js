@@ -10,6 +10,8 @@ module.exports = {
     path: path.resolve(__dirname, "../dist")
   },
   devServer: {
+    hot: true,
+    color:true,
     contentBase: "dist"
   },
   module: {

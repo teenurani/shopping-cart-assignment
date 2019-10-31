@@ -39,10 +39,7 @@ const webpackDevMiddleware = require("webpack-dev-middleware")(
   config.devServer
 );
 
-const webpackHotMiddleware = require("webpack-hot-middleware")(compiler);
-
 app.use(webpackDevMiddleware);
-app.use(webpackHotMiddleware);
 
 //handel favicon request
 app.use(function(req, res, next) {
