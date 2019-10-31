@@ -4,14 +4,14 @@ const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: ["./src/main.js"],
-  mode: "development",
+  mode: process.env.mode,
   output: {
     filename: "main-bundle.js",
     path: path.resolve(__dirname, "../dist")
   },
   devServer: {
     hot: true,
-    color:true,
+    color: true,
     contentBase: "dist"
   },
   module: {
