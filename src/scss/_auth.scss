@@ -3,7 +3,7 @@
   justify-content: center;
   @include screen-width;
   margin: 3rem 0rem;
-  font-size: 0.9rem;
+  font-size: $font-size-sm;
   .auth__header {
     h1 {
       margin: 1rem auto;
@@ -18,5 +18,14 @@
 @include responsive-for-IPad {
   .auth {
     max-width: 100%;
+    .btn {
+      font-size: $font-size-md;
+    }
+  }
+}
+
+@include responsive-for-desktop {
+  .auth .btn {
+    font-size: $font-size-md;
   }
 }
