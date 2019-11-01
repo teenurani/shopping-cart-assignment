@@ -8,7 +8,7 @@ export const PRODUCT_SELECTOR = {
   highlightClass: "highlight",
   categoryDropdown: document.querySelector(".product__sidebar__sm select")
 };
-export const HOME_SELECTOR = {  
+export const HOME_SELECTOR = {
   homeCategoryList: document.querySelector(".category__items")
 };
 export const CAROUSEL_SELECTOR = {
@@ -39,7 +39,8 @@ export const CART_SELECTOR = {
   buyNow: "buy-now",
   cartPlus: "btn cart-plus",
   cartMinus: "btn cart-minus",
-  cartItem: document.querySelector("#cart span")
+  cartItem: document.querySelector("#cart span"),
+  cartCloseBtn: ".cart__content--header button"
 };
 export const GLOBAL = {
   bodySelector: document.querySelector("body")

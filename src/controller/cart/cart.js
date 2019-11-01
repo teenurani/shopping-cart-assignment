@@ -45,15 +45,25 @@ const removeFromCart = async productId => {
 document.addEventListener("click", function(el) {
   const cartModal = CART_SELECTOR.cartModal;
   if (el.target && el.target.className == CART_SELECTOR.cartPlus) {
+    // add item to cart
     addToCart(el.target.id);
   } else if (el.target && el.target.className == CART_SELECTOR.cartMinus) {
+    // remove item from cart
     removeFromCart(el.target.id);
   } else if (
     el.target &&
     (el.target.className == CART_SELECTOR.cartClose ||
       event.target == cartModal)
   ) {
+    // Scenario of cart modal close
     GLOBAL.bodySelector.classList.remove("no-scroll");
     cartModal.style.display = "none";
+  }
+});
+
+// control focus of cart modal
+document.addEventListener("focusout", function(el) {
+  if (el.target && el.target.classList.contains("cart-focus-control")) {
+    document.querySelector(CART_SELECTOR.cartCloseBtn).focus();
   }
 });
