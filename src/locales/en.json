@@ -3,9 +3,9 @@
     "MAIN_HEADING": "My Cart",
     "EMPTY_HEADING": "No items in your cart",
     "EMPTY_CONTENT": "Your favourite items are just a click away",
-    "EMPTY_FOOTER_BTN": "Start Shopping",
+    "EMPTY_FOOTER_LINK": "Start Shopping",
     "TAGLINE_TEXT": "You won't find it cheaper anywhere",
-    "FOOTER_BTN": "Proceed to Checkout",
+    "FOOTER_LINK": "Proceed to Checkout",
     "FOOTER_PROMO": "Promo code can be applied on payment page",
     "RS": "Rs "
   },
