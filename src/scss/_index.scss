@@ -1,10 +1,12 @@
 @import "./var";
 @import "./global";
 @import "./mixins";
-@import "../controller/header/header";
 @import "./footer";
+@import "./auth";
+
+//controller or modules base scss
+@import "../controller/header/header";
 @import "../controller/carousel/carousel";
 @import "../controller/home/home";
 @import "../controller/product/product";
-@import "./auth";
 @import "../controller/cart/cart";

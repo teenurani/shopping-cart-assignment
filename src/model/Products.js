@@ -2,6 +2,7 @@ import { getResults } from "../js/api";
 import { CONSTANTS } from "../js/constants";
 import { END_POINTS } from "../js/service";
 
+//get product list as per categories or complete list
 export default class Products {
   constructor(query) {
     this.query = query;

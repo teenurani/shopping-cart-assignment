@@ -1,5 +1,5 @@
 import { PRODUCT_SELECTOR } from "../js/base";
-const lang = require("../i18/en.json");
+const lang = require("../locales/en.json");
 
 const productsView = product => {
   const markup = `

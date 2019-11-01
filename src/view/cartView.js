@@ -1,5 +1,5 @@
 import { CART_SELECTOR } from "../js/base";
-const lang = require("../i18/en.json");
+const lang = require("../locales/en.json");
 
 const mainMarkup = `
   <div class="cart__content">

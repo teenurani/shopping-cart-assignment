@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var en = require("../i18/en.json");
+var en = require("../locales/en.json");
 
 router.all("/", function(req, res, next) {
   res.render("home", { header: en.HEADER, footer: en.FOOTER, home: en.HOME });
