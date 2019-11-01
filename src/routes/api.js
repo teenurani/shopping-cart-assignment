@@ -1,24 +1,22 @@
 var express = require("express");
 var router = express.Router();
-const banners = require("../data/banners/index.get.json");
-const products = require("../data/products/index.get.json");
-const categories = require("../data/categories/index.get.json");
+const path = require("path");
 const addToCart = require("../data/addToCart/index.post.json");
 const cart = []; // Store product id
 
 // banners list
 router.get("/getBanners", function(req, res) {
-  res.json(banners);
+  res.sendFile(path.resolve(__dirname, "../data/banners/index.get.json"));
 });
 
 //product list
 router.get("/getProductList", function(req, res) {
-  res.json(products);
+  res.sendFile(path.resolve(__dirname, "../data/products/index.get.json"));
 });
 
 //categories list
 router.get("/getCategories", function(req, res) {
-  res.json(categories);
+  res.sendFile(path.resolve(__dirname, "../data/categories/index.get.json"));
 });
 
 //cart list
@@ -60,6 +58,7 @@ router.post("/removeFromCart", function(req, res) {
 */
 const cartList = () => {
   var cartData = {};
+  const products = require("../data/products/index.get.json");
   cart.map(i => (cartData[i] = (cartData[i] || 0) + 1));
 
   const cartListData = { data: [] };
