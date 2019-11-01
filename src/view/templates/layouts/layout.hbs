@@ -13,7 +13,7 @@
 <body>
     <header class="main__header">
         <nav class="nav">
-            <a href="/" class="main__header__logo">
+            <a href="/" class="nav__logo">
                 <picture>
                     <source media='(max-width: 480px)' srcset='/static/images/logo.png' />
                     <source media='(min-width: 1024px)' srcset='/static/images/logo_2x.png' />
@@ -37,7 +37,7 @@
                         <a class="nav__link" href="/registration">{{ header.REGISTER}}</a>
                     </li>
                 </ul>
-                <button id="cart" class="cart" aria-label="cart">
+                <button id="cart" class="nav__auth__cart" aria-label="cart">
                     <img src="/static/images/cart.svg" alt="cart" />
                     <span aria-label="No of items in cart"> </span>
                 </button>

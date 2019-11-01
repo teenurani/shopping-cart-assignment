@@ -1,6 +1,7 @@
 import { getCategories } from "../../model/Category";
 import { getBanners } from "../../model/Banners";
 import * as homeView from "../../view/homeView";
+import * as carouselView from "../../view/carouselView";
 import { CONSTANTS } from "../../js/constants";
 
 const state = {};
@@ -13,7 +14,7 @@ const controlBanners = async () => {
     console.log(CONSTANTS.ERROR_MSG.BANNERS, err);
   }
   // render result on UI
-  homeView.renderBanners(state.bannersList);
+  carouselView.renderBanners(state.bannersList);
 };
 
 const controlCategories = async () => {
@@ -31,7 +32,7 @@ const controlDots = () => {
   const bannersLen = state.bannersList.length;
   state.dotArray = [...Array(bannersLen).keys()];
   // render result on UI
-  homeView.renderDots(state.dotArray);
+  carouselView.renderDots(state.dotArray);
 };
 
 if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.HOME) {

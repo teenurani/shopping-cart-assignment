@@ -8,14 +8,14 @@ export const PRODUCT_SELECTOR = {
   highlightClass: "highlight",
   categoryDropdown: document.querySelector(".product__sidebar__sm select")
 };
-export const HOME_SELECTOR = {
-  bannersList: document.querySelector(".prev"),
+export const HOME_SELECTOR = {  
   homeCategoryList: document.querySelector(".category__items")
 };
 export const CAROUSEL_SELECTOR = {
-  bannersDotsList: document.querySelector(".dot__container"),
-  carouselItem: document.getElementsByClassName("carousel__item"),
-  bannersDot: document.getElementsByClassName("dot")
+  bannersList: document.querySelector(".carousel__prev"),
+  bannersDotsList: document.querySelector(".carousel__dots"),
+  carouselItem: document.getElementsByClassName("carousel__banner"),
+  bannersDot: document.getElementsByClassName("carousel__dots--dot")
 };
 export const AUTH_SELECTOR = {
   getPassword: document.getElementById("password"),

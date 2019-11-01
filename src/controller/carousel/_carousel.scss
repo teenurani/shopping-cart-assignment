@@ -1,15 +1,14 @@
 /* carousel container */
-.carousel__container {
+.carousel {
   position: relative;
   @include screen-width-sm;
-
-  .carousel__item {
+  /* banners */
+  &__banner {
     display: none;
   }
-
   /* Next & previous buttons */
-  .prev,
-  .next {
+  &__prev,
+  &__next {
     display: none;
     cursor: pointer;
     position: absolute;
@@ -27,71 +26,68 @@
   }
 
   /* Position the "next button" to the right */
-  .next {
+  &__next {
     right: 0;
     border-radius: 0.18rem 0 0 0.18rem;
   }
 
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
+  &__prev:hover,
+  &__next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  .dot__container {
+  &__dots {
     text-align: center;
     margin-top: 0rem;
+    /* The dots/bullets/indicators */
+    &--dot {
+      cursor: pointer;
+      height: 0.4rem;
+      width: 0.4rem;
+      margin: 0 0.6rem;
+      background-color: $color-grey-light;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active,
+    &--dot:hover {
+      background-color: #717171;
+    }
   }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 0.4rem;
-    width: 0.4rem;
-    margin: 0 0.6rem;
-    background-color: $color-grey-light;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active,
-  .dot:hover {
-    background-color: #717171;
-  }
-
   .border-block {
     margin-top: -1.9rem;
   }
 }
 
 @include responsive-for-IPad {
-  .carousel__container {
-    .dot__container {
+  .carousel {
+    &__prev,
+    &__next {
+      display: block;
+    }
+    &__dots {
       margin-top: 0rem;
     }
     .border-block {
       margin-top: 0rem;
-    }
-    .prev,
-    .next {
-      display: block;
     }
   }
 }
 
 @include responsive-for-desktop {
-  .carousel__container {
+  .carousel {
     @include screen-width;
-    .dot__container {
+    &__dots {
       margin-top: 0rem;
+    }
+    &__prev,
+    &__next {
+      display: block;
     }
     .border-block {
       margin-top: 0rem;
-    }
-    .prev,
-    .next {
-      display: block;
     }
   }
 }
