@@ -16,8 +16,8 @@ const categoriesView = category => {
       <img src=${category.imageUrl} alt=${category.name} />
     </div>
     <div class="category__item--info">
-      <h3 aria-label="${category.name}">${category.name}</h3>
-      <p aria-label="${category.name}">${category.description}</p>
+      <h3>${category.name}</h3>
+      <p>${category.description}</p>
       <a href="/product" class="link">Explore ${category.key}</a>
     </div>
     <div class="border-block">

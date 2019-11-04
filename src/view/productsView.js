@@ -4,15 +4,15 @@ const lang = require("../locales/en.json");
 const productsView = product => {
   const markup = `
   <li class="product__info__list--item">
-    <h3 aria-label="${product.name}"> ${product.name}</h3>
+    <h3> ${product.name}</h3>
     <img src=${product.imageURL} alt="name"/>
-    <p aria-label="${product.description}"> ${product.description} </p>
+    <p> ${product.description} </p>
     <div class="price__info">
       <span aria-label="Price: - ${product.price}">${lang.PRODUCTS.MRP} ${lang.PRODUCTS.RS} ${product.price}</span>
       <button class="btn buy-now" name="${product.id}">${lang.PRODUCTS.BUY}</button>
     </div>
     <div class="price__info--IPad">    
-      <button class="btn btn-lg buy-now" name="${product.id}" aria-label="Price: - ${product.price}">${lang.PRODUCTS.BUY} @ ${lang.PRODUCTS.RS} ${product.price}</button>
+      <button class="btn btn-lg buy-now" name="${product.id}">${lang.PRODUCTS.BUY} @ ${lang.PRODUCTS.RS} ${product.price}</button>
     </div>
   </li>`;
 

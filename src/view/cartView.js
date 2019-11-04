@@ -17,7 +17,7 @@ const cartMarkup = `
         <ul class="cart__product__list">              
         </ul>
         <div class="tagline">
-          <img src="../../../static/images/lowest-price.png" />
+          <img src="../../../static/images/lowest-price.png" alt="price"/>
           <span>${lang.CART.TAGLINE_TEXT}</span>
         </div>
       </div>    
@@ -30,7 +30,7 @@ const cartMarkup = `
 const cartListView = value => {
   const markup = `
     <li class="cart__product__list--item cart-${value.id}">          
-      <img src="../../..${value.imageURL}" />
+      <img src="../../..${value.imageURL}" alt="product"/>
       <div class="cart__detail">
         <h3>${value.name}</h3>
         <div class="desc">
