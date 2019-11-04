@@ -1,5 +1,21 @@
 .footer {
   background-color: $color-grey-lighter;
-  padding: 1rem 2rem;
-  text-align: center;  
+  text-align: center;
+  font-size: $font-size-sm;
+  padding: 1rem 0.5rem;
+}
+
+@include responsive-for-IPad {
+  .footer {
+    padding: 1rem 2rem;
+    font-size: $font-size-md;
+  }
+}
+
+@include responsive-for-desktop {
+  .footer {
+    text-align: left;
+    font-size: $font-size-md;
+    padding: 1rem 0rem 1rem 10%;
+  }
 }
