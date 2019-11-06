@@ -6,12 +6,10 @@
 .nav {
   display: grid;
   grid-template-columns: 25% 35% 40%;
-  height: 100%;
   @include screen-width-sm;
   a {
     color: $color-grey-dark;
     font-weight: bold;
-
     img {
       width: 100%;
       margin: 0.5rem;
@@ -27,34 +25,28 @@
     }
   }
   &__auth {
+    display: flex;
+    flex-direction: column;
     &__items {
       display: none;
       justify-content: flex-end;
-      font-size: 0.8rem;
-      height: 30%;
+      font-size: $font-size-sm;
     }
     &__items--item {
       padding: 0.5rem;
     }
     &__cart {
-      align-self: end;
       background-color: $color-grey-lighter;
       display: flex;
-      justify-content: center;
       border: none;
-      width: 100%;
-      height: 100%;
+      justify-content: center;
       align-items: center;
+      padding: 10%;
     }
     &__cart img {
       height: 2rem;
-      float: left;
     }
     &__cart span {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      height: 2rem;
       color: $color-grey-darker;
       padding-left: 0.5rem;
       font-weight: bold;
@@ -71,9 +63,6 @@
     &__auth {
       &__items {
         display: flex;
-      }
-      &__cart {
-        height: 70%;
       }
     }
   }
@@ -94,9 +83,6 @@
       margin-top: 0rem;
       &__items {
         display: flex;
-      }
-      &__cart {
-        height: 70%;
       }
     }
   }

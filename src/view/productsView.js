@@ -22,7 +22,7 @@ const productsView = product => {
 const categoriesView = category => {
   const markup = `
   <li class="product__sidebar__list--item">
-    <button id="${category.id}">${category.name}</button>
+    <a id="${category.id}">${category.name}</a>
   </li>`;
   PRODUCT_SELECTOR.categoryList.insertAdjacentHTML("beforeend", markup);
 };

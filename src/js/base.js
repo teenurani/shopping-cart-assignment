@@ -4,7 +4,7 @@ export const PRODUCT_SELECTOR = {
   categoryList: document.querySelector(".product__sidebar__list"),
   productCategoryItem: "product__sidebar__list--item",
   productCategoryItemClass: ".product__sidebar__list--item",
-  productCategorySelector: ".product__sidebar__list--item button",
+  productCategorySelector: ".product__sidebar__list--item a",
   highlightClass: "highlight",
   categoryDropdown: document.querySelector(".product__sidebar__sm select")
 };

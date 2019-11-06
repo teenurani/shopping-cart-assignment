@@ -1,7 +1,6 @@
 /* carousel container */
 .carousel {
-  position: relative;
-  @include screen-width-sm;
+  position: relative;  
   /* banners */
   &__banner {
     display: none;
@@ -77,8 +76,7 @@
 }
 
 @include responsive-for-desktop {
-  .carousel {
-    @include screen-width;
+  .carousel {  
     &__dots {
       margin-top: 0rem;
     }

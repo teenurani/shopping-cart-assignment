@@ -1,8 +1,8 @@
+.home {
+  @include screen-width-sm;
+}
 .home__category {
   font-size: $font-size-sm;
-}
-.category__items {
-  @include screen-width-sm;
 }
 .category__item {
   display: grid;
@@ -47,10 +47,12 @@
 }
 
 @include responsive-for-desktop {
+  .home {
+    @include screen-width;
+  }
   .home__category {
     font-size: $font-size-md;
     .category__items {
-      @include screen-width;
       &--info p {
         margin: 1.5rem 0rem 2rem 0rem;
       }
