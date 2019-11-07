@@ -1,10 +1,8 @@
 export const PRODUCT_SELECTOR = {
   productList: document.querySelector(".product__info__list"),
-  productInfo: document.querySelectorAll(".product__sidebar__list--item"),
   categoryList: document.querySelector(".product__sidebar__list"),
-  productCategoryItem: "product__sidebar__list--item",
-  productCategoryItemClass: ".product__sidebar__list--item",
-  productCategorySelector: ".product__sidebar__list--item a",
+  categoryListClass: "product__sidebar__list",
+  categoryLinkSelector: "li a",
   highlightClass: "highlight",
   categoryDropdown: document.querySelector(".product__sidebar__sm select")
 };

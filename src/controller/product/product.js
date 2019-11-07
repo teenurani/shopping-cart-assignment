@@ -53,23 +53,23 @@ if (CONSTANTS.currentURL == CONSTANTS.PAGE_URL.PRODUCT) {
     const _self = el.target;
     if (_self) {
       if (
-        _self.parentElement.classList.contains(
-          PRODUCT_SELECTOR.productCategoryItem
+        _self.parentElement.parentElement.classList.contains(
+          PRODUCT_SELECTOR.categoryListClass
         )
       ) {
         if (_self.classList.contains(PRODUCT_SELECTOR.highlightClass)) {
           //handel event on unselect of category and render UI
           _self.classList.remove(PRODUCT_SELECTOR.highlightClass);
-          controlProduct();          
+          controlProduct();
         } else {
           //handel event on selection of category and render UI
           _self.parentElement.parentElement
-            .querySelectorAll(PRODUCT_SELECTOR.productCategorySelector)
+            .querySelectorAll(PRODUCT_SELECTOR.categoryLinkSelector)
             .forEach(function(el) {
               el.classList.remove(PRODUCT_SELECTOR.highlightClass);
             });
-          _self.classList.add(PRODUCT_SELECTOR.highlightClass);
-          controlProduct(_self.id);         
+          _self.classList.add(PRODUCT_SELECTOR.highlightClass);         
+          controlProduct(_self.getAttribute("category"));
         }
       } else if (_self.classList.contains(CART_SELECTOR.buyNow)) {
         // handel event on buy-now button

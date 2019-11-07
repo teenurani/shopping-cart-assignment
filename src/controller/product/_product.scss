@@ -8,10 +8,10 @@
   display: none;
   background-color: $color-grey-lighter;
   &__list {
-    &--item {
+    li {
       border-bottom: solid 0.13rem $color-grey-light;
     }
-    &--item a {
+    li a {
       font-size: $font-size-md;
       font-weight: bold;
       color: $color-grey-dark;
@@ -97,7 +97,7 @@
   .product__info__list {
     grid-template-columns: repeat(2, 50%);
     margin-right: 1rem;
-    &--item {
+    li {
       grid-template-rows: auto 1fr auto;
       .price__info {
         display: none;
@@ -123,7 +123,7 @@
   }
   .product__info__list {
     grid-template-columns: repeat(4, 25%);
-    &--item {
+    li {
       img {
         max-width: 80%;
         grid-column: 1/3;
