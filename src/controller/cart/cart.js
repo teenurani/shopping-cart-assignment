@@ -46,10 +46,10 @@ document.addEventListener("click", function(el) {
   const cartModal = CART_SELECTOR.cartModal;
   if (el.target && el.target.className == CART_SELECTOR.cartPlus) {
     // add item to cart
-    addToCart(el.target.id);
+    addToCart(el.target.getAttribute("product"));
   } else if (el.target && el.target.className == CART_SELECTOR.cartMinus) {
     // remove item from cart
-    removeFromCart(el.target.id);
+    removeFromCart(el.target.getAttribute("product"));
   } else if (
     el.target &&
     (el.target.className == CART_SELECTOR.cartClose ||

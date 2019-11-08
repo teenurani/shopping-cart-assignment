@@ -34,9 +34,9 @@ const cartListView = value => {
       <div class="cart__detail">
         <h3>${value.name}</h3>
         <div class="desc">
-          <button class="btn cart-minus" id=${value.id}>&#8722;</button>
+          <button class="btn cart-minus" product=${value.id}>&#8722;</button>
           <span class="items">${value.quantity}</span>
-          <button class="btn cart-plus" id=${value.id}>&#43;</button>
+          <button class="btn cart-plus" product=${value.id}>&#43;</button>
           <span class="multiplication">&#215;</span>
           <span class="price"> ${lang.CART.RS} ${value.price}</span>
           <span class="total"> ${lang.CART.RS} ${value.quantity *

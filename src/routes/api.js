@@ -45,9 +45,9 @@ router.post("/addToCart", function(req, res) {
   params - productId
 */
 router.post("/removeFromCart", function(req, res) {
-  const index = cart.indexOf(req.body.productId);
+  const index = cart.indexOf(req.body.productId);  
   if (index !== -1) cart.splice(index, 1);
-  addToCart.cart = cart.length;
+  addToCart.itemCount = cart.length;
   const cartData = cartList();
   addToCart.data = cartData;
   res.json(addToCart);

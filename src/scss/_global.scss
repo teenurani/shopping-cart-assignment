@@ -33,13 +33,8 @@ body {
     outline: 0 none;
   }
 
-  .form__control:focus {
-    border-color: #53c4ce;
-    margin: 1rem auto;
-  }
-
   .form__error {
-    color: red;
+    color: $color-red;
   }
 }
 

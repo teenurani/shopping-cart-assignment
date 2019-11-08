@@ -9,7 +9,25 @@ const bannersView = banner => {
   CAROUSEL_SELECTOR.bannersList.insertAdjacentHTML("beforebegin", markup);
 };
 
-const categoriesView = category => {
+const categoriesViewEven = category => {
+  const markup = `
+  <li class="category__item">    
+    <div class="category__item--info">
+      <h3>${category.name}</h3>
+      <p>${category.description}</p>
+      <a href="/product" class="link">Explore ${category.key}</a>
+    </div>
+    <div class="category__item--img">
+      <img src=${category.imageUrl} alt=${category.name} />
+    </div>
+    <div class="border-block">
+      <img src="/static/images/border.jpg" alt="border" />
+    </div>
+  </li>`;
+  HOME_SELECTOR.homeCategoryList.insertAdjacentHTML("beforeend", markup);
+};
+
+const categoriesViewOdd = category => {
   const markup = `
   <li class="category__item">
     <div class="category__item--img">
@@ -35,7 +53,11 @@ const dotViews = dot => {
 };
 
 export const renderCategories = categories => {
-  categories.forEach(categoriesView);
+  categories.forEach(function(category, index) {
+    index % 2 === 0
+      ? categoriesViewOdd(category)
+      : categoriesViewEven(category);
+  });
 };
 
 export const renderBanners = banners => {
