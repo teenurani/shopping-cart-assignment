@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SABKA BAZAAR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Description" content="Sabka Bazar" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600,700" />
+</head>
+
+<body>
+    <header class="main__header">
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <picture>
+                    <source media='(max-width: 480px)' srcset='/static/images/logo.png' />
+                    <source media='(min-width: 1024px)' srcset='/static/images/logo_2x.png' />
+                    <img src='/static/images/logo.png' alt="Sabka Bazaar" />
+                </picture>
+            </a>
+            <ul class="nav__list">
+                <li>
+                    <a href="/">{{header.HOME}}</a>
+                </li>
+                <li>
+                    <a href="/product">{{ header.PRODUCTS}}</a>
+                </li>
+            </ul>
+            <div class="nav__auth">
+                <ul class="nav__auth__items">
+                    <li>
+                        <a href="/login">{{ header.SIGN-IN}}</a>
+                    </li>
+                    <li>
+                        <a href="/registration">{{ header.REGISTER}}</a>
+                    </li>
+                </ul>
+                <button id="cart" class="nav__auth__cart" aria-label="cart">
+                    <img src="/static/images/cart.svg" alt="cart" />
+                    <span aria-label="No of items in cart"> </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div id="cart__modal" class="cart__modal"></div>
+    {{{ body }}}
+    <footer class="footer">
+        {{{footer.CONTENT}}}
+    </footer>
+    <script src="main-bundle.js"></script>
+</body>
+
+</html>

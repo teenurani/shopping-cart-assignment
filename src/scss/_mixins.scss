@@ -1,0 +1,25 @@
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@mixin responsive-for-IPad {
+  @media (min-width: $IPad-min-width) and (max-width: $IPad-max-width) {
+    @content;
+  }
+}
+
+@mixin responsive-for-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin screen-width {
+  max-width: 80%;
+  margin: auto;
+}
+
+@mixin screen-width-sm {
+  max-width: 100%;
+  margin: auto;
+}

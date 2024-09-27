@@ -1,0 +1,44 @@
+{
+  "CART": {
+    "MAIN_HEADING": "My Cart",
+    "EMPTY_HEADING": "No items in your cart",
+    "EMPTY_CONTENT": "Your favourite items are just a click away",
+    "EMPTY_FOOTER_LINK": "Start Shopping",
+    "TAGLINE_TEXT": "You won't find it cheaper anywhere",
+    "FOOTER_LINK": "Proceed to Checkout",
+    "FOOTER_PROMO": "Promo code can be applied on payment page",
+    "RS": "Rs "
+  },
+  "HEADER": {
+    "HOME": "Home",
+    "PRODUCTS": "Products",
+    "SIGN-IN": "SignIn",
+    "REGISTER": "Register"
+  },
+  "FOOTER": {
+    "CONTENT": "Copyright &#169; 2011-2018 Sabka Bazar Grocery Supplies Pvt Ltd"
+  },
+  "HOME": { "PREV": "Prev", "NEXT": "Next" },
+  "LOGIN": {
+    "HEADER": {
+      "HEADING": "Login",
+      "CONTENT": "Get access to your orders. Wishlist and Recommendations"
+    },
+    "MAIN": { "EMAIL": "Email", "PASSWORD": "Password", "SUBMIT": "Login" }
+  },
+  "PRODUCTS": { "BUY": "Buy Now", "MRP": "MRP", "RS": "Rs " },
+  "REGISTER": {
+    "HEADER": {
+      "HEADING": "Signup",
+      "CONTENT": "We do not share your personal details with anyone."
+    },
+    "MAIN": {
+      "FIRST-NAME": "First Name",
+      "LAST-NAME": "Last Name",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "CONFIRM-PASSWORD": "Confirm Password",
+      "SUBMIT": "Signup"
+    }
+  }
+}

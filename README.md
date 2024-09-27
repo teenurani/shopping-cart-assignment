@@ -6,10 +6,14 @@ This is the base folder for the shopping cart exercise. You will have all the st
 
 Clone this repo and run following command for starting the mock server:
 
+## Server Side or Backend changes 
+server.js - server start from here
+
+## Front End changes 
+Refer - webpack config
+
 ```
 npm install
-npm run start
-# or
-yarn install
-yarn start
+npm start
+Open in browser - http://localhost:3000/
 ```
